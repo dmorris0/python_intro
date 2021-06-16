@@ -69,4 +69,4 @@ Then from in the terminal type `python`
 
 ![Python in Terminal](.Images/vs_terminal_2.png)
 
-You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.
+You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.  The terminal defaults to PowerShell, which sometimes does not work well with Python.  You can switch to the Command shell from the pulldown menu on the top-right of the terminal panel (to the right of the `+` sign).
