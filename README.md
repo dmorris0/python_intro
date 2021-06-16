@@ -15,6 +15,10 @@ These notes follow the chapters in the book, and highlight key points.  If you a
 ## Learning Python
 To learn Python with these notes, it is best try all the examples yourself.  Don't cut and paste the commands.  Instead, type them in to the Python command line *yourself*.  This act of typing is integral to learning how to program.
 
+## Operating System
+
+Python is available on most operating systems (OSes).  These notes will assume Windows, but it should not be hard to use them with a different OS.
+
 ## Integrated Developer Environment
 On difference between the notes and the book, is that the notes use VSCode, rather than the IDLE, for an IDE (Integrated Developer Environment).  VSCode is free, open-source, cross-platform, extremely powerful, and surprisingly easy to use.  It provides powerful editing and debugging functions for Python and is available here: [https://code.visualstudio.com/](https://code.visualstudio.com/).  
 
