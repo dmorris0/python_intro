@@ -70,3 +70,10 @@ Then from in the terminal type `python`
 ![Python in Terminal](.Images/vs_terminal_2.png)
 
 You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.  The terminal defaults to PowerShell, which sometimes does not work well with Python.  You can switch to the Command shell from the pulldown menu on the top-right of the terminal panel (to the right of the `+` sign).
+
+To make the `Command Prompt` default instead of `Power Shell`, do the following:
+1. Press `Ctrl` + `Shift` + `p`
+2. Type `profile` in the text box
+3. Select `Terminal: Select Default Profile`
+4. Select `Command Prompt`
+
