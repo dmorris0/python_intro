@@ -1,4 +1,4 @@
-# Chapter 2 Installation
+# Chapter 2 Python and IDE Installation
 
 ## Download Python
 
@@ -53,3 +53,20 @@ You should now have a working interactive Python interpreter.  You can exit it w
 >>> exit()
 ```
 
+## Visual Studio Code
+
+These notes will use VSCode.  Download and install it from: [https://code.visualstudio.com/](https://code.visualstudio.com/).
+
+Next install the Python extension.  Click on the Extensions icon on the left, type `python`, select the top item from Microsoft, and click on install.
+
+![Python in VSCode](.Images/vs_python.png)
+
+You can open a terminal within VSCode.  In the `View` menu select `Terminal`:
+
+![View Menu](.Images/vs_terminal.png)
+
+Then from in the terminal type `python`
+
+![Python in Terminal](.Images/vs_terminal_2.png)
+
+You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.
