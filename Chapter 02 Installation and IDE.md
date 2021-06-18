@@ -57,9 +57,13 @@ You should now have a working interactive Python interpreter.  You can exit it w
 
 These notes will use VSCode.  Download and install it from: [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
+### Install the Python Extension
+
 Next install the Python extension.  Click on the Extensions icon on the left, type `python`, select the top item from Microsoft, and click on install.
 
 ![Python in VSCode](.Images/vs_python.png)
+
+### Terminal in VS Code
 
 You can open a terminal within VSCode.  In the `View` menu select `Terminal`:
 
@@ -77,3 +81,8 @@ To make the `Command Prompt` default instead of `Power Shell`, do the following:
 3. Select `Terminal: Select Default Profile`
 4. Select `Command Prompt`
 
+You will need to restart VSCode for this to take effect.
+
+### View Notes in VSCode
+
+To open these notes in VSCode, first clone this repository.  Then in the `File` menu select `Open Folder` and open the cloned repo folder.  After you open a Markdown file (.md), click on the preview button on the top right.  

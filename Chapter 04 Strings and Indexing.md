@@ -1,4 +1,4 @@
-# Chapter 3 Strings and Indexing
+# Chapter 4 Strings and Indexing
 
 ```python 
 >>> type("Hello friend")
