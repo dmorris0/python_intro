@@ -77,14 +77,22 @@ IndexError: string index out of range
 >>> a[::2]        # Every second element
 'Mlnasi Hlo"'
 ```
-## Methods
-* Strings have methods. 
+## Immuntability and Methods
+* Strings are **immutable**. That is, they cannot be changed:
+```python
+>>> text = "Hello"
+>>> text[0] = "h"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+```
+Nevertheless there are methods that operate on strings, such as `.lower()` and `.upper()`: 
 ```python
 >>> "Hello Friend".lower()
 'hello friend'
 ```
-Note: strings are **immutable**. That is, they do not change.  Methods like this do not change the string, but rather return a copy in lower case.
-* Remove whitespace from the left, right or both:
+These methods do not change the actual string, but rather return a copy with the operation applied.
+* Other useful methods remove whitespace from the left, right or both:
 ```python
 >>> name = "  Samuel Becket  "
 >>> name.lstrip()         # Remove left whitespace
@@ -94,7 +102,7 @@ Note: strings are **immutable**. That is, they do not change.  Methods like this
 >>> name.strip()          # Remove left and right whitespace
 'Samuel Becket'
 ```
-* Check if starts with a particular string:
+* Check if a string starts with a particular string:
 ```python
 >>> name.startswith("Samuel")
 False
