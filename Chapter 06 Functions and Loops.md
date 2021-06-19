@@ -23,7 +23,7 @@ This is a bad idea because you no longer have access to the built-in function `l
 <built-in function len>
 ```
 ## Executing functions
-Typing the name of a function does not execute it
+Typing the name of a function **does not** execute it
 ```python
 >>> len
 <built-in function len>

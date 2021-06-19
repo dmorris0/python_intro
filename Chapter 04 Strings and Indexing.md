@@ -118,7 +118,7 @@ What is your name? Queen Elizabeth
 'Queen Elizabeth'
 ```
 
-# Strings and Numbers
+## Strings and Numbers
 * Arithmetic operations on strings:
 ```python
 >>> num = "2"
@@ -154,8 +154,8 @@ Or for version of Python prior ro 3.6 which do not have `f-strings`, you can use
 >>> "I ate {} apples and {} oranges".format(n1,n2)
 'I ate 10 apples and 5 oranges'
 ```
-# Find and Replace
-Find will return the first instance of a string:
+## Find and Replace
+The `.find()` method will return the first instance of a string:
 ```python
 >>> text = "Hello friend! You my greatest friend."
 >>> text.find("friend")             # Find first instance of "friend"
