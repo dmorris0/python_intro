@@ -185,14 +185,14 @@ Not a valid number, try again
 Input a number: 17
 ```
 This `except ValueError:` line captures only exceptions of type `ValueError`.  If you press `Ctrl-C` instead of inputting text, the result will be:
-```
+```python
 Input a number: Traceback (most recent call last):
   File "<stdin>", line 3, in <module>
 KeyboardInterrupt
 ```
 This generates a `KeyboardInterrupt` exception which is not handled by this except and so stops the code. This is good, as typically you want `Ctrl-C` to stop execution of the code. 
 
-Consider what would happen if we used a bare `except` with no exception type like this, and if you pressed `Ctrl-C` at the input line:
+Consider what would happen if we used a bare `except` with no exception type like the below, and if you pressed `Ctrl-C` at the input line:
 ```python
 >>> while True:
 ...     try:
@@ -206,9 +206,10 @@ Input a number: Not a valid number, try again
 Input a number: Not a valid number, try again
 Input a number: 1
 ```
-I pressed `Ctrl-C` three times, and the code kept redirecting me to input a number.  The only way I got out this time was to input a valid number.  If there were some actual error inside the `try:` block, then this code could get into an infinite loop that you could not stop with a `Ctrl-C`.  In general, it is best to avoid bare `except:` statements, and use appropriate exception types.
+I pressed `Ctrl-C` three times, and the code kept redirecting me to input a number.  The only way I got out was to input a valid number.  If there were some actual error inside the `try:` block, then this code could get into an infinite loop that you could not stop with a `Ctrl-C`.  Usually it is best to avoid bare `except:` statements, and rather to include appropriate exception type that you plan to handle.  As in this example, bare `except:` statements can hide errors that should be discovered.
 
-Now, you can add multiple `except` lines, each with one or more different exception types.  The following are two instructive examples from [https://docs.python.org/3/tutorial/errors.html](https://docs.python.org/3/tutorial/errors.html)
+## More In-Depth Examples
+You may wish to skip the next examples on a first reading. You can add multiple `except` lines, each with one or more different exception types.  The following are two instructive examples from [https://docs.python.org/3/tutorial/errors.html](https://docs.python.org/3/tutorial/errors.html)
 ```python
 >>> import sys
 >>> try:
