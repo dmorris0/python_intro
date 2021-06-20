@@ -134,5 +134,108 @@ r
 s
 r
 ```
-## Exceptions
+## Errors and Exceptions
+
+A **syntax error** is the most common error you will likely encounter as you learn Python, for example:
+```python
+>>> if True print('Hello')
+  File "<stdin>", line 1
+    if True print('Hello')
+            ^
+SyntaxError: invalid syntax
+```
+Python identifies the line with the error and indicates the first point at which the error is identified (the up-arrow). Then at the start of the bottom line identifies this error is of type: `SyntaxError`, and includes a short description.  In this case we are missing a colon `:`.  A function with a syntax error will often give an error before running.
+
+**Exceptions** are runtime errors.  Some examples include:
+```python
+>>> 1/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>> 10 * new_variable
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'new_variable' is not defined
+>>> '4' + 4
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> int('22.3')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '22.3'
+```
+Notice the exception types: `ZeroDivisionError`, `NameError`, `TypeError`, and `ValueError`.  There are a variety of additional exception types which are listed [here](https://docs.python.org/3/library/exceptions.html#bltin-exceptions).  Knowing the exception type provides a way to handle it, as explained next.
+
+## Exception Handling
+
+Let's say we want to ensure the user inputs an integer:
+```python
+>>> while True:
+...     try:
+...         val = int(input("Input a number: "))
+...         break    # Exit while loop when we have a valid number
+...     except ValueError:
+...         print("Not a valid number, try again")
+...
+Input a number: hello
+Not a valid number, try again
+Input a number: 25.6
+Not a valid number, try again
+Input a number: 17
+```
+This `except ValueError:` line captures only exceptions of type `ValueError`.  If you press `Ctrl-C` instead of inputting text, the result will be:
+```
+Input a number: Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+KeyboardInterrupt
+```
+This generates a `KeyboardInterrupt` exception which is not handled by this except and so stops the code. This is good, as typically you want `Ctrl-C` to stop execution of the code. 
+
+Consider what would happen if we used a bare `except` with no exception type like this, and if you pressed `Ctrl-C` at the input line:
+```python
+>>> while True:
+...     try:
+...         val = int(input("Input a number: "))
+...         break    # Exit while loop when we have a valid number
+...     except:
+...         print("Not a valid number, try again")
+...
+Input a number: Not a valid number, try again
+Input a number: Not a valid number, try again
+Input a number: Not a valid number, try again
+Input a number: 1
+```
+I pressed `Ctrl-C` three times, and the code kept redirecting me to input a number.  The only way I got out this time was to input a valid number.  If there were some actual error inside the `try:` block, then this code could get into an infinite loop that you could not stop with a `Ctrl-C`.  In general, it is best to avoid bare `except:` statements, and use appropriate exception types.
+
+Now, you can add multiple `except` lines, each with one or more different exception types.  The following are two instructive examples from [https://docs.python.org/3/tutorial/errors.html](https://docs.python.org/3/tutorial/errors.html)
+```python
+>>> import sys
+>>> try:
+...     f = open('myfile.txt')
+...     s = f.readline()
+...     i = int(s.strip())
+... except OSError as err:
+...     print("OS error: {0}".format(err))
+... except ValueError:
+...     print("Could not convert data to an integer.")
+... except:
+...     print("Unexpected error:", sys.exc_info()[0])
+...     raise
+... 
+```
+Here each `except` handles a separate error type.  The final bare `except` handles all other types, and notice that it raises an exception with `raise`.
+```python
+>>> import sys
+>>> for arg in sys.argv[1:]:
+...     try:
+...         f = open(arg, 'r')
+...     except OSError:
+...         print('cannot open', arg)
+...     else:
+...         print(arg, 'has', len(f.readlines()), 'lines')
+...         f.close()
+... 
+```
+Here `sys.argv` is a list of arguments passed to a Python file, and so is only useful as part of a Python program (and not in the interactive terminal).  This attempts to open each input argument as a file.  If it cannot open it, the `except OSError:` command causes it to display a message and go on to the next.  The `else:` block that reads the file will be executed only if the `try:` block is successful.  It is better to keep this code in its own block, rather than as part of the try block as otherwise it would be protected by the `try`-`except` pair and we may wish other exceptions to be raised if its contents are not what we expect.
 

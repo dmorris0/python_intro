@@ -1,24 +1,23 @@
-# Introduction to Python
+# Introduction to Python: Notes
 
 ## Daniel Morris, PhD
 ___
-## Book:
+
+These are notes on the following book:
 
 ### Python Basics: A Practical Introduction to Python 3
-
 ### Authors: David Amos, Dan Bader, Joanna Jablonski, Fletcher Heisler
 4th edition, 2021
-___
-## These Notes:
-These notes follow the chapters in the book, and highlight key points.  If you are already familiar with Python or similar languages, you can review the material quicker using these notes.  But if you have not had much experience programming, then following the book is preferable, although you may wish to use VSCode, as explained below.
 
-## Learning Python
-To learn Python with these notes, it is best try all the examples yourself.  Don't cut and paste the commands.  Instead, type them in to the Python command line *yourself*.  This act of typing is integral to learning how to program.  The best way to learn programming concepts is to **use them** after you hear or see them. 
+The book is available [here](https://realpython.com/products/python-basics-book/), although second hand copies can be obtained much more cheaply online.  
 
-## Operating System
+## What Are These Notes?
 
-Python is available on most operating systems (OSes).  These notes will assume Windows, but it should not be hard to use the notes with a different OS.
+These notes follow a selection of the chapters in the book by Amos, and highlight key points.   There are some differences with the book, most notably the use of Visual Studio Code as an Integrated Developer Environment (IDE) rather than IDLE use by the book.  
 
-## Integrated Developer Environment (IDE)
-The book uses the IDE that comes with Python called IDLE. These notes, on the other hand, use VSCode.  VSCode is free, open-source, cross-platform, extremely powerful, and surprisingly easy to use.  It provides powerful editing and debugging functions for Python. It also has extensions for many other applications.  For instance, I am writing these notes in VSCode in Markdown with an editor that provides a preview of the output.  If you wish, you can read these notes and run an interactive terminal all in VSCode.
+## Who Are They For?
+
+The notes are fairly terse, and are intended for someone well-versed in other programming languages and who is seeking to learn the syntax, style and peculiarities of Python.  The notes are also only an introduction and not comprehensive.  After completing them you should be comfortable programming basic capabililties in Python.  Once you are at that level, it is usually fairly simple to learn new features to solve a given problem through a Google or StackOverflow search.  
+
+If, on the other hand, you are new to programming, then these notes may be too terse, and it would be preferable to follow the book or do an [online tutorial](https://docs.python.org/3/tutorial/index.html).  If you do that, you may still find the discussion on VSCode in these notes useful.  
 
