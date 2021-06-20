@@ -2,7 +2,7 @@
 
 This chapter differs from Chapter 7 of the book which focuses on the IDLE debugger.  Here the VSCode IDE and debugger are briefly explored.
 
-VSCode provides powerful debugging capabilities for Python and other languages.  This document steps through the process of debugging Python code.  It also demonstrates how to pass arguments to your code in a debug session. 
+VSCode provides powerful debugging capabilities for Python and other languages.  This document steps through the process of debugging Python code.  
 
 ## Folders
 In VSCode, rather than opening a single file, it is more usual to open a folder (from the File Menu).  This is typically the source folder for a project.  Make sure you have cloned the repo with these notes called `python_intro`.  Then open this folder using the File Menu.  
