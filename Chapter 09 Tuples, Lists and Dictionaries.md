@@ -249,3 +249,35 @@ To copy the the actual lists, you need a **deep** copy.
 [[0, 1], [2, 3], [4, 5]]
 ```
 
+### Sorting
+A list can be sorted *in-place* using the `.sort()` method:
+```python
+>>> trees = ['Pine', 'Spruce', 'Cedar', 'Carob']
+>>> trees.sort()
+>>> trees
+['Carob', 'Cedar', 'Pine', 'Spruce']
+>>> numbers = [5, 2, 4, 1]
+>>> numbers.sort()
+>>> numbers
+[1, 2, 4, 5]
+```
+A function can be provided as an optional argument called `key` whose output is used to sort the list.  The function must take one argument and output one value, and only the name without the parentheses is provided.  For example to sort on the length of a element, use the built-in function `len`:
+```python
+>>> trees = ['Pine', 'Spruce', 'Cedar', 'Carob']
+>>> trees.sort(key=len)
+>>> trees
+['Pine', 'Cedar', 'Carob', 'Spruce']
+```
+You can provide a user-defined function for this too.  And a second argument `reverse` can be set to `True` to sort in reverse order.  For example, to sort in reverse order on the last letter of a name:
+```python
+>>> def last_letter(word):
+...     return word[-1]         # Return last letter
+...
+>>> trees = ['Pine', 'Spruce', 'Cedar', 'Carob']
+>>> trees.sort(key=last_letter, reverse=True)
+>>> trees
+['Cedar', 'Pine', 'Spruce', 'Carob']
+```
+
+
+
