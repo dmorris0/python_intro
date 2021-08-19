@@ -241,4 +241,4 @@ Here each `except` handles a separate error type.  The final bare `except` handl
 Here `sys.argv` is a list of arguments passed to a Python file, and so is only useful as part of a Python program (and not in the interactive terminal).  This attempts to open each input argument as a file.  If it cannot open it, the `except OSError:` command causes it to display a message and go on to the next.  The `else:` block that reads the file will be executed only if the `try:` block is successful.  It is better to keep this code in its own block, rather than as part of the try block as otherwise it would be protected by the `try`-`except` pair and we may wish other exceptions to be raised if its contents are not what we expect.
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 9: Tuples, Lists and Dictionaries](Chapter_09_Tuples_Lists_and_Dictionaries.md)
+### [Outline](README.md), Next: [Chapter 9: Tuples, Lists and Dictionaries](Chapter_09_Tuples_Lists_and_Dictionaries.md)

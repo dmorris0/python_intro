@@ -138,5 +138,5 @@ With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`, where `%` is 
 Here `.2f` indicates a **fixed-point floating** number with 2 digits after the decimal place.  Notice that is is rounded as with `round()`
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 6: Functions and Loops](Chapter_06_Functions_and_Loops.md)
+### [Outline](README.md), Next: [Chapter 6: Functions and Loops](Chapter_06_Functions_and_Loops.md)
 

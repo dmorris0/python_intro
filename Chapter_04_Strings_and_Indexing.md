@@ -167,4 +167,4 @@ The `.find()` method will return the first instance of a string:
 ```
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 5: Numbers and Math](Chapter_05_Numbers_and_Math.md)
+### [Outline](README.md), Next: [Chapter 5: Numbers and Math](Chapter_05_Numbers_and_Math.md)

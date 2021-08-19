@@ -65,4 +65,4 @@ This is very useful for checking that your functions are operating as expected a
 To quit execution in the middle, press `Shift-F5` or the `Stop` icon.
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 8: Conditional Logic and Control Flow](Chapter_08_Conditional_Logic_and_Control_Flow.md)
+### [Outline](README.md), Next: [Chapter 8: Conditional Logic and Control Flow](Chapter_08_Conditional_Logic_and_Control_Flow.md)

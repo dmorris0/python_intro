@@ -26,4 +26,4 @@ There are many online resources on Python including the following:
 
 You can also read the book that these notes are based on, or you can follow along these notes.  Choose the method that works best for you.
 ___
-### Go to: [Outline](README.md), or: [Chapter 2: Installation and IDE](Chapter_02_Installation_and_IDE.md)
+### [Outline](README.md), Next: [Chapter 2: Installation and IDE](Chapter_02_Installation_and_IDE.md)

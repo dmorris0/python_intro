@@ -94,4 +94,4 @@ To open these notes in VSCode, first clone this repository.  Then in the `File` 
 I prefer to edit with auto-save on, which is not the default.  You can toggle this option from the `File` menu.
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 3: Python Programs](Chapter_03_Python_Programs.md)
+### [Outline](README.md), Next: [Chapter 3: Python Programs](Chapter_03_Python_Programs.md)

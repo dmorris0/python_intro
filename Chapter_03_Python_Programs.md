@@ -44,4 +44,4 @@ Hello Class
   * Don't describe what is already obvious
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 4: Strings and Indexing](Chapter_04_Strings_and_Indexing.md)
+### [Outline](README.md), Next: [Chapter 4: Strings and Indexing](Chapter_04_Strings_and_Indexing.md)

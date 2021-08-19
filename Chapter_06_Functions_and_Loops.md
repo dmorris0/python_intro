@@ -185,4 +185,4 @@ Functions inside functions behave similarly; they inherit the scope of their par
 It is possible to define a variable as `global` from inside a function, but usually it is better practice to avoid using global variables inside a function.  
 
 ___
-### Go to: [Outline](README.md), or: [Chapter 7: Debug in VSCode](Chapter_07_Debug_in_VSCode.md)
+### [Outline](README.md), Next: [Chapter 7: Debug in VSCode](Chapter_07_Debug_in_VSCode.md)
