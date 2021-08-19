@@ -1,8 +1,8 @@
-# Chapter 2 Python and IDE Installation
+# Chapter 2: Python and IDE Installation
 
 ## Download Python
 
-Download the latest version of Python from [https://www.python.org/](https://www.python.org/).  Most Windows devices should use the recommended `Windows Installer (64bit)` option.  Downloading from this site will give you the full Python version, rather than the more limited version available in the Windows Store.  The rest of this page will describe the Windows installation, although a similar process applies to other operating systems.  
+Download the latest version of Python from [https://www.python.org/](https://www.python.org/).  These notes assume you have Python 3.8 or later.  Most Windows devices should use the recommended `Windows Installer (64bit)` option.  Downloading from this site will give you the full Python version, rather than the more limited version available in the Windows Store.  The rest of this chapter will describe the Windows installation of Python and VSCode, although a similar process applies to other operating systems.  
 
 ## Install Python
 
@@ -57,9 +57,9 @@ You should now have a working interactive Python interpreter.  You can exit it w
 
 These notes will use VSCode.  Download and install it from: [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
-### Install the Python Extension
+### The Python Extension
 
-Next install the Python extension.  Click on the Extensions icon on the left, type `python`, select the top item from Microsoft, and click on install.
+VSCode supports Python formatting and color-coding through and extension.  To install the Python extension, click on the Extensions icon on the left, type `python`, select the top item from Microsoft, and click on install.
 
 ![Python in VSCode](.Images/vs_python.png)
 
@@ -93,3 +93,5 @@ To open these notes in VSCode, first clone this repository.  Then in the `File` 
 
 I prefer to edit with auto-save on, which is not the default.  You can toggle this option from the `File` menu.
 
+___
+### Go to: [Outline](README.md), or: [Chapter 3: Python Programs](Chapter_03_Python_Programs.md)

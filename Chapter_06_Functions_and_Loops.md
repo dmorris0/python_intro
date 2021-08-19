@@ -1,4 +1,4 @@
-# Chapter 6 Functions and Loops
+# Chapter 6: Functions and Loops
 
 Example of a built-in function: `len()`
 * Functions are values:
@@ -56,7 +56,7 @@ None
 
 ## Defining your own functions
 
-Create a file called `arithmetic.py` in the current folder.  Add this text and save it.
+Create a file called `arithmetic.py` in the the folder in which you are running Python.  Add this text and save it.
 ```python
 def multiply(x, y):
     """ Returns the product of x and y """
@@ -91,7 +91,7 @@ So it is a good idea to document each function you write in this way.  For funct
 
 ## Practice:
 
-Implement the temperature conversion function in Section 6.3
+Create a function called `divide(x,y)` in `arithmetic.py` that returns `x/y`.  Confirm that you can import and use it.
 
 ## While Loops
 
@@ -140,7 +140,7 @@ l
 l
 o
 ```
-We get the same result, but much less succintly, and with greater opportunities for bugs.  For example, if you omitted the line `i += 1`, the loop would iterate forever -- try it.  Pressing `Ctrl-C` will exit from such an infinite loop.   
+We get the same result, but less succinct, and has greater opportunities for bugs.  For example, if you omitted the line `i += 1`, the loop would iterate forever -- try it.  Pressing `Ctrl-C` will exit from such an infinite loop.   
 
 ### The `range()` function
 
@@ -162,7 +162,7 @@ The `range()` function provides a simple way to iterate over a numbers between t
 
 ## Scope
 
-A variable can have only one definition, within the **scope** of the variable.  Reassigning it will change its value.  However, in difference scopes it may have different values.  Now the command line is a **global** scope.  A function defines a **local** scope within itself.  
+A variable can have only one definition, within the **scope** of the variable.  Reassigning it will change its value.  However, in different scopes it may have different values.  Now the command line is a **global** scope.  A function defines a **local** scope within itself.  
 ```python
 >>> a = 1       # Global variable
 >>> b = 2       # Global variable
@@ -183,3 +183,6 @@ NameError: name 'c' is not defined
 Functions inside functions behave similarly; they inherit the scope of their parent function but also have a local scope not visible to their parent.
 
 It is possible to define a variable as `global` from inside a function, but usually it is better practice to avoid using global variables inside a function.  
+
+___
+### Go to: [Outline](README.md), or: [Chapter 7: Debug in VSCode](Chapter_07_Debug_in_VSCode.md)

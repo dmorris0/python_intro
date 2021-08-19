@@ -1,18 +1,20 @@
-# Chapter 4 Strings and Indexing
+# Chapter 4: Strings and Indexing
+
+The object `"Hello friend"` is a string which you can confirm:
 
 ```python 
 >>> type("Hello friend")
 <class 'str'>
 ```
 
-* Stings defined using single or double quotes
+* Stings are defined using single or double quotes
 * Can place single quotes inside double quotes and vice versa
 ```python
 >>> a = 'Melinda said "Hello!"'
 >>> print(a)
 Melinda said "Hello!"
 ```
-* Strings can be concatenated
+* Strings can be concatenated with a `+`
 ```python
 >>> b = "Now goodbye"
 >>> c = a + b     # + sign concatenates two strings
@@ -21,7 +23,7 @@ Melinda said "Hello!"
 >>> print(c)
 Melinda said "Hello!"Now goodbye
 ```
-* Length of a string
+* Find the length of a string with the `len()` function:
 ```python
 >>> len(a)
 21
@@ -36,7 +38,7 @@ Indexing is a key concept and is used extensively not just for strings, but list
 'e'
 >>> a[20]         # Last element (for string of length 21)
 '"'
->>> a[-1]         # Last element
+>>> a[-1]         # Last element (for any string)
 '"'
 >>> a[-21]        # First element (for string of length 21)
 'M'
@@ -149,7 +151,7 @@ Using `f-strings` is often simpler and preferable for converting strings to numb
 >>> f"I ate {n1} apples and {n2} oranges"
 'I ate 10 apples and 5 oranges'
 ```
-Or for version of Python prior ro 3.6 which do not have `f-strings`, you can use:
+Or for version of Python prior to Python 3.6 which do not have `f-strings`, you can use:
 ```python
 >>> "I ate {} apples and {} oranges".format(n1,n2)
 'I ate 10 apples and 5 oranges'
@@ -163,3 +165,6 @@ The `.find()` method will return the first instance of a string:
 >>> text.replace("friend","enemy")  # Replace all instances of "friend" with "enemy"
 'Hello enemy! You my greatest enemy.'
 ```
+
+___
+### Go to: [Outline](README.md), or: [Chapter 5: Numbers and Math](Chapter_05_Numbers_and_Math.md)

@@ -1,4 +1,4 @@
-# Chapter 8 Conditional Logic and Control Flow
+# Chapter 8: Conditional Logic and Control Flow
 
 This chapter discusses
 * Comparing 2 variables
@@ -70,7 +70,7 @@ This gives an error because the comparator `==` is applied before the `not`, and
 True
 ```
 
-## Constrolling Flow of Code
+## Controlling Flow of Code
 An `if` statement will control the flow of execution depending on the output of a condition.  For example:
 ```python
 >>> if 2 + 4 < 8:
@@ -206,7 +206,7 @@ Input a number: Not a valid number, try again
 Input a number: Not a valid number, try again
 Input a number: 1
 ```
-I pressed `Ctrl-C` three times, and the code kept redirecting me to input a number.  The only way I got out was to input a valid number.  If there were some actual error inside the `try:` block, then this code could get into an infinite loop that you could not stop with a `Ctrl-C`.  Usually it is best to avoid bare `except:` statements, and rather to include appropriate exception type that you plan to handle.  As in this example, bare `except:` statements can hide errors that should be discovered.
+I pressed `Ctrl-C` three times, and the code kept redirecting me to input a number.  The only way I got out was to input a valid number.  If there were some actual error inside the `try:` block, then this code could get into an infinite loop that you could not stop with a `Ctrl-C`.  Usually it is best to avoid bare `except:` statements, and rather to include appropriate exception type that you plan to handle.
 
 ## More In-Depth Examples
 You may wish to skip the next examples on a first reading. You can add multiple `except` lines, each with one or more different exception types.  The following are two instructive examples from [https://docs.python.org/3/tutorial/errors.html](https://docs.python.org/3/tutorial/errors.html)
@@ -225,7 +225,7 @@ You may wish to skip the next examples on a first reading. You can add multiple 
 ...     raise
 ... 
 ```
-Here each `except` handles a separate error type.  The final bare `except` handles all other types, and notice that it raises an exception with `raise`.
+Here each `except` handles a separate error type.  The final bare `except` handles all other types, and notice that it subsequently raises an exception with `raise`.
 ```python
 >>> import sys
 >>> for arg in sys.argv[1:]:
@@ -240,3 +240,5 @@ Here each `except` handles a separate error type.  The final bare `except` handl
 ```
 Here `sys.argv` is a list of arguments passed to a Python file, and so is only useful as part of a Python program (and not in the interactive terminal).  This attempts to open each input argument as a file.  If it cannot open it, the `except OSError:` command causes it to display a message and go on to the next.  The `else:` block that reads the file will be executed only if the `try:` block is successful.  It is better to keep this code in its own block, rather than as part of the try block as otherwise it would be protected by the `try`-`except` pair and we may wish other exceptions to be raised if its contents are not what we expect.
 
+___
+### Go to: [Outline](README.md), or: [Chapter 9: Tuples, Lists and Dictionaries](Chapter_09_Tuples_Lists_and_Dictionaries.md)

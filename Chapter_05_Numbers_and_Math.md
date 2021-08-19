@@ -1,4 +1,4 @@
-# Chapter 5 Numbers and Math
+# Chapter 5: Numbers and Math
 
 ## Integers and Floating Point Numbers
 ```python
@@ -14,7 +14,7 @@
 >>> float("200")
 200.0
 ```
-* E notation for floats
+* `e` notation for floats
 ```python
 >>> 1e3
 1000.0
@@ -32,39 +32,37 @@ inf
 
 ## Arithmetic Operations
 
-Reommended notation: use spaces between operators and digits
+Recommended notation: use spaces between operators and digits
 ```python
 >>> 1 + 2
 3
 ```
-Adding, Subtracting, Multiplying and Dividing floats and integers:
+Adding, Subtracting, Multiplying and Dividing floats and integers.  When one number is a float the output will be a float. 
 ```python
 >>> 2 + 3.0
 5.0
-```
-```python
 >>> 2 - 3.0
 -1.0
-```
-```python
 >>> 3 * 2.0
 6.0
 ```
+Also division creates a float:
 ```python
 >>> 12 / 3
 4.0
 ```
+This can be cast to an integer:
 ```python
 >>> int( 12 / 3 )
 4
 ```
-* Integer division `//` divides and rounds down:
+But integer division `//` is preferable and it rounds down:
 ```python
 >>> 12 // 3
 4
->>> 5.0 / 2
+>>> 5.0 // 2
 2.0
->>> -5 / 2
+>>> -5 // 2
 -3
 ```
 * Divide by zero:
@@ -83,7 +81,7 @@ ZeroDivisionError: division by zero
 >>> 4 ** 0.5
 2.0
 ```
-* Negative exponents are the same as dividing 1 by the number raised to a positive exponent
+* Negative exponents work as expected (i.e. 1 over the result of a positive exponent)
 ```python
 >>> 2 ** -1
 0.5
@@ -124,7 +122,7 @@ If the digit to the left of the `5` is even, then rounds down and if odd then ro
 >>> pow(3, 2)
 9
 ```
-With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`
+With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`, where `%` is the modulo:
 ```python
 >>> pow(2, 3, 3)
 2
@@ -138,4 +136,7 @@ With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`
 'n is approximately 1.25
 ```
 Here `.2f` indicates a **fixed-point floating** number with 2 digits after the decimal place.  Notice that is is rounded as with `round()`
+
+___
+### Go to: [Outline](README.md), or: [Chapter 6: Functions and Loops](Chapter_06_Functions_and_Loops.md)
 

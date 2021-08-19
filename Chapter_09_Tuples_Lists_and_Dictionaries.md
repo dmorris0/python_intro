@@ -1,4 +1,4 @@
-# Chapter 9 Tuples, Lists and Dictionaries
+# Chapter 9: Tuples, Lists and Dictionaries
 
 ## Tuples
 
@@ -37,12 +37,13 @@ In this case it converts a string to a tuple.
 ### Length and Indexing
 Tuples have a length and can be indexed and sliced just like strings (see Chapter 4):
 ```python
->>> my_tuple = tuple("Python")\
+>>> my_tuple = tuple("Python")
 >>> len(my_tuple)       # Length of tuple
 6
 >>> my_tuple[0]         # First element
->>> my_tuple[:1]        # Tuple containing first element
 'P'
+>>> my_tuple[:1]        # Tuple containing first element
+('P',)
 >>> my_tuple[:3]        # Tuple containing first 3 elements
 ('P', 'y', 't')
 ```
@@ -278,6 +279,10 @@ You can provide a user-defined function for this too.  And a second argument `re
 >>> trees
 ['Cedar', 'Pine', 'Spruce', 'Carob']
 ```
+Notice that we passed the name of the function to `key` without parentheses.
 
+## Dictionaries
 
+___
+### Go to: [Outline](README.md), or: 
 

@@ -2,11 +2,11 @@
 
 
 ## Learning Python
-In overviewing Python, these notes focus on teaching by example.  To learn Python with these notes, it is best try all the examples yourself.  Don't cut and paste the commands -- there is very little benefit to that.  Instead, type them in to the Python command line *yourself*.  This act of typing is integral to learning how to program, as the best way to learn programming concepts is to **use them** after you hear or see them. 
+In overviewing Python, these notes focus on teaching by example.  To learn Python with these notes, it is best try all the examples yourself.  Don't cut and paste the commands -- there is very little benefit to that.  Instead, type them in to the Python command line *yourself*.  This act of typing is integral to learning how to program, as the best way to learn programming concepts is to **use them** after you see them. 
 
 ## Operating System
 
-Python is available on most operating systems (OSes).  All how-to-install descriptions will assume you are working in Windows.  However, it should be straightforward to perform the same tasks on Linux, MaxOS and other OSes.
+Python is available on many operating systems (OSes), although here the how-to-install descriptions will assume you are working in Windows.  However, it should be straightforward to perform the same tasks on Linux, MaxOS and other OSes.
 
 ## Integrated Developer Environment (IDE)
 The book uses the IDE that comes with Python called IDLE. These notes, on the other hand, use VSCode.  VSCode is free, open-source, cross-platform, extremely powerful, and surprisingly easy to use.  It provides powerful editing and debugging functions for Python. It also has extensions for many other applications.  For instance, I am writing these notes in VSCode in Markdown with an editor that provides a preview of the output.  If you wish, you can read these notes and run an interactive terminal all in VSCode.
@@ -22,3 +22,8 @@ There are many online resources on Python including the following:
 - Exhaustive Python documentation and downloads: [https://www.python.org/](https://www.python.org/) 
 - Search with the [python] or [opencv] tags in the search bar: [https://stackoverflow.com](https://stackoverflow.com) 
 - OpenCV Python Tutorials: [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_intro/py_intro.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_intro/py_intro.html) 
+
+
+You can also read the book that these notes are based on, or you can follow along these notes.  Choose the method that works best for you.
+___
+### Go to: [Outline](README.md), or: [Chapter 2: Installation and IDE](Chapter_02_Installation_and_IDE.md)
