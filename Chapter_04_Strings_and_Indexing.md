@@ -79,7 +79,7 @@ IndexError: string index out of range
 >>> a[::2]        # Every second element
 'Mlnasi Hlo"'
 ```
-## Immuntability and Methods
+## Immutability and Methods
 * Strings are **immutable**. That is, they cannot be changed:
 ```python
 >>> text = "Hello"

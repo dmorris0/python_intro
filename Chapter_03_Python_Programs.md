@@ -39,9 +39,10 @@ Hello Class
 * Inline comments: A `#` will comment out the rest of the line.
 * Conventions:
   * Write complete sentences
-  * Single space after th `#`
+  * Single space after the `#`
   * At least 2 spaces before inline `#`
   * Don't describe what is already obvious
+    * Ex: if you have the line `number_of_cars = 5`, don't add a comment `# Number of cars`
 
 ___
 ### [Outline](README.md), Next: [Chapter 4: Strings and Indexing](Chapter_04_Strings_and_Indexing.md)
