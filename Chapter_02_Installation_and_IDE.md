@@ -75,9 +75,9 @@ Then from in the terminal type `python`
 
 Note: if you have installed Python while VSCode is running, then Python may not be in your path.  You can simply restart VSCode, and that should solve it.
 
-You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.  The terminal defaults to PowerShell, which sometimes does not work well with Python.  You can switch to the Command shell from the pulldown menu on the top-right of the terminal panel (to the right of the `+` sign).
+You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.  The terminal defaults to PowerShell, which sometimes does not work well with Python.  If you have difficulties with running Python in PowerShell, you can switch to the Command shell from the pulldown menu on the top-right of the terminal panel (to the right of the `+` sign).
 
-To make the `Command Prompt` default instead of `Power Shell`, do the following:
+To make the `Command Prompt` default instead of `PowerShell`, do the following:
 1. Press `Ctrl` + `Shift` + `p`
 2. Type `profile` in the text box
 3. Select `Terminal: Select Default Profile`
@@ -92,6 +92,8 @@ To open these notes in VSCode, first clone this repository.  Then in the `File` 
 ### Auto Save
 
 I prefer to edit with auto-save on, which is not the default.  You can toggle this option from the `File` menu.
+
+![Auto Save](.Images/autosave.png)
 
 ___
 ### [Outline](README.md), Next: [Chapter 3: Python Programs](Chapter_03_Python_Programs.md)
