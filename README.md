@@ -24,7 +24,8 @@ ___
 * [Chapter 8: Conditional Logic and Control Flow](Chapter_08_Conditional_Logic_and_Control_Flow.md)
 * [Chapter 9: Tuples, Lists and Dictionaries](Chapter_09_Tuples_Lists_and_Dictionaries.md)
 * [Chapter 10: Classes](Chapter_10_Classes.md)
-* [Chapter 11: Modules](Chapter_11_Modules.md)
+* [Chapter 11: Modules and Packages](Chapter_11_Modules_and_Packages.md)
+* [Chapter 16: Virtual Environments](Chapter_16_Virtual_Environments.md) `*`
 * [Chapter 17: Numpy and Matplotlib](Chapter_17_Numpy_and_Matplotlib.md) `*`
 * [Chapter 20: OpenCV](Chapter_20_OpenCV.md) `*`
 
