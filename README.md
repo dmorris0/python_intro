@@ -1,9 +1,9 @@
-# Introduction to Python: Notes
+# Python Basics: Companion Notes
 
 ## Daniel Morris, PhD
 ___
 
-These are companion notes that summarize the key Python concepts taught the following book:   
+These are companion notes that summarize and add some material to the Python concepts taught in the following book:   
 
 ### **[Python Basics: A Practical Introduction to Python 3](https://realpython.com/products/python-basics-book/)**
 ### By: **David Amos, Dan Bader, Joanna Jablonski, Fletcher Heisler**
