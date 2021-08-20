@@ -283,7 +283,77 @@ Notice that we passed the name of the function to `key` without parentheses.
 
 ## Dictionaries
 
-**To Do**
+A dictionary stores element as `key-value` pairs.  To extract a `value`, one provides the key, rather than the index like in a tuple or list.  Keys and values can be of any type and any value, with the constraint that keys must be immutable. Here is an example:
+
+```python
+>>> capitals = { "United States":"Washington DC", "Canada":"Toronto", "Mexico":"Mexico City" }
+>>> capitals
+{'United States': 'Washington DC', 'Canada': 'Toronto', 'Mexico': 'Mexico City'}
+```
+Empty dictionaries can be created with
+```python
+>>> {}
+{}
+>>> dict()
+{}
+```
+
+### Accessing values
+Dictionaries do not have a pre-defined order, and are accessed by key:
+```python
+>>> capitals['Canada']
+'Toronto'
+```
+
+### Add / delete an element
+```python
+>>> capitals['United Kingdom'] = 'London'
+>>> del capitals['Canada']
+>>> capitals
+{'United States': 'Washington DC', 'Mexico': 'Mexico City', 'United Kingdom': 'London'}
+```
+
+### Existence of a Key
+Accessing a key that does not exist gives an error:
+```python
+>>> capitals['Spain']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Spain'
+```
+The `in` keyword will check:
+```python
+>>> 'Brazil' in capitals
+False
+```
+Combine this with an `if` statement like this:
+```python
+>>> if 'United Kingdom' in capitals:
+...     print('We have a destination')
+...
+We have a destination
+```
+
+### Iterate over a Dictionary
+To iterate over `keys` use:
+```python
+>>> for key in capitals:
+...     print(key)
+...
+United States
+Mexico
+United Kingdom
+```
+To iterate and obtain both the `key` and `value` for each element use the `.items()` function:
+```python
+>>> for country, capital in capitals.items():
+...     print(f'{capital} is the capital of {country}')
+...
+Washington DC is the capital of United States
+Mexico City is the capital of Mexico
+London is the capital of United Kingdom
+```
+
 ___
 ### [Outline](README.md), Next: [Chapter 10: Classes](Chapter_11_Classes.md)
 
