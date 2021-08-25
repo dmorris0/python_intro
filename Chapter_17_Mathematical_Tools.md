@@ -338,6 +338,12 @@ array([[ 6.,  6.,  9.],
 ```
 What is happening here?  `spoints` is size `(4,3)` while `t` is size `(3,)`.  During broadcasting, `t` is first converted to size `(1,3)`, and then replicated four times along dimension 0 and then added.  Thus `t` is added to each of the four 3D points, effectively translating them by `t`. 
 
+Here are some practice examples.  Predict what you will get from the following operations and then try them out:
+```python
+>>> np.ones( (3,1) ) * np.arange(4)
+>>> np.ones( (2,4,3) ) * np.array( [2,4,8] )
+```
+
 Broadcasting is useful not only for operating on point cloud arrays, but also on image arrays.
 
 
