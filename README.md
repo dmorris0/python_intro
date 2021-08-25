@@ -26,17 +26,19 @@ ___
 * [Chapter 10: Classes](Chapter_10_Classes.md)
 * [Chapter 11: Modules and Packages](Chapter_11_Modules_and_Packages.md)
 * [Chapter 16: Virtual Environments](Chapter_16_Virtual_Environments.md) `*`
-* [Chapter 17: Numpy and Matplotlib](Chapter_17_Numpy_and_Matplotlib.md) `*`
-* [Chapter 20: OpenCV](Chapter_20_OpenCV.md) `*`
+* [Chapter 17: Mathematical Tools](Chapter_17_Mathematical_Tools.md) `*`
+* [Chapter 18: Conclusion](Chapter_18_Conclusion.md) `*`
 
 `*` These chapter topics differ significantly from those in the book.
 
 ___
 ## Who Are They For?
 
-The notes are fairly terse, and are intended for someone well-versed in other programming languages and who is seeking to learn the syntax, style and peculiarities of Python.  The notes are also only a very basic introduction to Python and not comprehensive.  After completing them you should be comfortable programming basic capabililties in Python.  Once you are at that level, it is fairly simple to learn new features to solve a given problem through a Google or StackOverflow search.  
+The notes are self-contained but fairly terse, and are intended for someone versed in other programming languages and who is seeking to learn the syntax, style and peculiarities of Python.  So, given some programming background, they can be followed without using the book.  
 
-If, on the other hand, you are new to programming, then these notes may be too terse, and it would be preferable to follow the book or do an [online tutorial](https://docs.python.org/3/tutorial/index.html).  If you do that, you may still find the discussion on VSCode in these notes useful.  
+The notes are also only a very basic introduction to Python and not comprehensive.  After completing them you should be comfortable programming basic capabililties in Python.  Once you are at that level, it is fairly simple to learn new features to solve a given problem through a Google or StackOverflow search.  
+
+If, on the other hand, you are new to programming, then these notes may be too terse, and it would be preferable to follow the book or do an [online tutorial](https://docs.python.org/3/tutorial/index.html).  Once you have done that, you may still some these notes useful.  
 
 ___
 ### Next: [Chapter 1: Introduction](Chapter_01_Introduction.md)

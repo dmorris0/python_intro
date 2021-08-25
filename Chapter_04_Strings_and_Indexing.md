@@ -30,9 +30,9 @@ Melinda said "Hello!"Now goodbye
 ```
 ## Indexing and Slicing
 Indexing is a key concept and is used extensively not just for strings, but lists and arrays.  It is worth spending some time to get familiary with how Python indexing works.  String indices start at `0` and proceed to the `length-1`. They can also be indexed from `-length` to `-1`.  
-* Example indices for the above-defined string `a`, that is length 21:
+* Example indices for the string `a = 'Melinda said "Hello!"'`, that is length 21:
 ```python
->>> a[0]          # First element of string
+>>> a[0]          # First element (for any string)
 'M'
 >>> a[1]          # Second element
 'e'
@@ -52,13 +52,13 @@ IndexError: string index out of range
 ```
 * Using slicing you can select portions of the string using the format `[<start inclusive>:<stop exclusive>]`
 ```python
->>> a[0:2]        # First two elements, i.e. 0, 1
+>>> a[0:2]        # First two elements, i.e. elements 0, 1
 'Me'
->>> a[0:7]        # First seven elements
+>>> a[0:7]        # First seven elements, i.e. elements 0, ..., 6
 'Melinda'
->>> a[15:21]      # Elements 15 through 20
+>>> a[15:21]      # Elements 15, ...,  20
 'ello!"'
->>> a[-21:-14]
+>>> a[-21:-14]    # For a length 21 string, these are also elements 0, ..., 6
 'Melinda'
 ```
 * To index from the start, drop the first element. To index to the end, drop the second element.
@@ -151,7 +151,7 @@ Using `f-strings` is often simpler and preferable for converting strings to numb
 >>> f"I ate {n1} apples and {n2} oranges"
 'I ate 10 apples and 5 oranges'
 ```
-Or for version of Python prior to Python 3.6 which do not have `f-strings`, you can use:
+Or for versions of Python prior to Python 3.6 which do not have `f-strings`, you can use:
 ```python
 >>> "I ate {} apples and {} oranges".format(n1,n2)
 'I ate 10 apples and 5 oranges'
