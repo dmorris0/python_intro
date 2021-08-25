@@ -74,29 +74,45 @@ Much easier eh?  And faster to boot!
 
 The same indexing and slicing that we saw used for strings is available for each dimension of Numpy arrays.  Thus, for example we have:
 ```python
+>>> new_point_array[0,0]
+2.0
 >>> new_point_array[0,1]
 1.0
+```
+The **rank** of an array is the number of dimensions, in this case 2.  The dimensions, or axes as they are called in Numpy, are numbered from left to right.  So the elements of a point, such as `[2., 1., 1.]` are arranged along **axis 1** of the 2D array, and the points are stacked along **axis 0**.  We can access the first point in multiple ways:
+```python
+>>> new_point_array[0]
+array([2., 1., 1.])
 >>> new_point_array[0,:]
 array([2., 1., 1.])
+```
+We can access the `X` values by slicing along axis 0 and selecting the first point:
+```python
 >>> new_point_array[:,0]
 array([2., 2., 4., 5.])
 ```
 Notice that the slices are returned as 1D arrays.  There are many more details to learn about indexing and adding dimensions to array which you can find in the official documentation: [https://numpy.org/doc/stable/reference/arrays.indexing.html](https://numpy.org/doc/stable/reference/arrays.indexing.html).  I strongly recommend you review this page. 
 
+To get some practice working with axes, try using `concatentate()` to combine arrays along different dimensions.  Predict what you get when you do the following commands, and then try them:
+```python
+>>> np.concatenate( (point_array, point_array), axis=0)
+>>> np.concatenate( (point_array, point_array), axis=1)
+```
+
 ## Rotations
 
-A common operation we will need is to rotate points, and these are best done using arrays.  Scipy has a rotation class that can read in rotations defined in multiple formats including Euler angles, rotation matrices and quaternions.  Its internal representation is hidden, but it can display a rotation in any of these formats.  Official documentation is [here](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.html?highlight=rotation#scipy.spatial.transform.Rotation).  Let's try it out.
+A common operation we will need is to rotate points, and these are best done using Numpy arrays.  Scipy has a rotation class that can read in rotations defined in multiple formats including Euler angles, rotation matrices and quaternions.  Its internal representation is hidden, but it can display a rotation in any of these formats.  Official documentation is [here](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.html?highlight=rotation#scipy.spatial.transform.Rotation).  Let's try it out.
 ```python
 >>> from scipy.spatial.transform import Rotation as R
 >>>
->>> rot = R.from_euler('XYZ',[0,0,45],degrees=True)
+>>> rot = R.from_euler('XYZ',[0,0,45],degrees=True)     # A 45-degree rotation around the z axis
 >>> rot
 <scipy.spatial.transform.rotation.Rotation object at 0x00000182D609E210>
 ```
 We can view the rotation in various representations like this:
 ```python
 >>> rot.as_euler('XYZ')
-array([0.        , 0.        , 0.78539816])
+array([0.        , 0.        , 0.78539816])       # Returned as radians
 >>> rot.as_matrix()
 array([[ 0.70710678, -0.70710678,  0.        ],
        [ 0.70710678,  0.70710678,  0.        ],
@@ -128,7 +144,7 @@ Images are another data type for which Numpy arrays are useful.  We will use Ope
 ```python
 >>> img = cv.imread('source/repos/python_intro/.Images/book.png')
 ```
-Here I have provided the full path from where Python is running to the `book.png` image in this repo.  You'll need to adjust the path to point to this image from where you are running Python.  Now let's examine the image we just read in:
+Here I have provided the full path from where Python is running to the `book.png` image in this repo.  You'll need to adjust your path to point to this image from where you are running Python.  Now let's examine the image we just read in:
 ```python
 >>> type(img)
 <class 'numpy.ndarray'>
@@ -136,20 +152,20 @@ Here I have provided the full path from where Python is running to the `book.png
 We can see it is a Numpy array.  If you instead got `<class 'NoneType'>`, then the `imread()` function failed to read in the image; most likely because you gave it the wrong path.  Correct your path and read in the image.  To determine where Python is running from you can do:
 ```python
 >>> import os
->>> os.getcwd()
+>>> os.getcwd()             # Returns current working directory
 'C:\\Users\\morri'
 ```
 I assume you have successfully read in the image, and it is a `numpy.ndarray`.  Let's examine its size and type:
 ```python
 >>> img.shape
-(247, 160, 3)
->>> img.dtype
+(247, 160, 3)               # (height, width, nchannels)
+>>> img.dtype               # Data type of elements in numpy array
 dtype('uint8')
 ```
-We see that it is a 3D array; the `.shape` is a tuple with array dimensions, in this case: (height,width,nchannels).  The channels are (blue, green, red), as this is the default format for OpenCV, which differs from the more usual (red, green, blue) format.  The data type is an unsigned 8-bit type (`uint8`) which stores numbers from 0 to 255 inclusive.  We can extract the 3 components of a sample single pixel as follows:
+We see that it is a 3D array; the `.shape` is a tuple with array dimension sizes, in this case: (height, width, nchannels).  The three channels are (blue, green, red), as this is the default format for OpenCV, which differs from the more usual (red, green, blue) format.  The data type is an unsigned 8-bit type (`uint8`) which stores numbers from 0 to 255 inclusive.  We can extract the 3 components of a sample single pixel as follows:
 ```python
->>> img[22,28]
-array([212, 187, 143], dtype=uint8)
+>>> img[22,28]                        # Pixel row 22 and column 28
+array([212, 187, 143], dtype=uint8)   # [B, G, R]
 ```
 These three values are the (blue, green, red) values for that pixel.  Review Numpy [indexing](https://numpy.org/doc/stable/reference/arrays.indexing.html) if this isn't clear.
 
@@ -157,7 +173,7 @@ Let's say our goal is to find the horizontal image gradient of the grayscale ver
 ```python
 >>> img = img.astype(np.float32) / 255 
 ```
-This converts to 32-bit floating point array and scales to a range of 0 to 1, which is the usual range for floating point images.  It is best to use floating point rather than unsigned integers because the output range can be negative or could be larger than the maximum `uint8` value of 255.
+This converts to 32-bit floating point array and scales to a range of 0 to 1, which is the usual range for floating point images.  It is best to use floating point rather than unsigned integers because the grdient can be negative or could be larger than the maximum `uint8` value of 255.  Operating in `uint8` will result in gradients being clipped.  Confirming our new data type:
 ```python
 >>> img.dtype
 dtype('float32')
@@ -165,7 +181,7 @@ dtype('float32')
 
 Next, convert the image to grayscale with `cvtColor`, which is a general purpose colorspace transformation utility:
 ```python
->>> gimg = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+>>> gimg = cv.cvtColor(img, cv.COLOR_BGR2GRAY)  # Convert 3-channel color to single-channel grayscale
 ```
 This grayscale image is the same size, except with a single channel:
 ```python
@@ -174,19 +190,19 @@ This grayscale image is the same size, except with a single channel:
 ```
 Finally, let's apply a Sobel operator to obtain the image gradient in x:
 ```python
->>> gx = cv.Sobel(gimg,cv.CV_32F,1,0,ksize=5)
+>>> gx = cv.Sobel(gimg, cv.CV_32F, 1, 0, ksize=5)
 ```
-To see the meaning of the parameters, use: `help(cv.Sobel)`
+To see the meaning of the parameters, use: `help(cv.Sobel)`.  Next, let's see how to plot our result.
 
 
 ## Plotting
 
 OpenCV has some graphical display functions including showing images.  For instance:
 ```python
->>> cv.imshow('Image',img)
->>> cv.waitKey(2)
+>>> cv.imshow('Image',img)         # Show image in window "Image"
+>>> cv.waitKey(2)                  # Wait 2 millisec to give time for OpenCV to render image
 ```
-This will show an image in a window:
+This will show an image in a window like this:
 
 ![Image](.Images/show_book.png)
 
@@ -200,14 +216,14 @@ More sophisticated plotting is available with Matplotlib.  Here is an example us
 ```python
 >>> import matplotlib.pyplot as plt
 >>>
->>> fig = plt.figure(num='Image Gradient')
->>> ax = fig.subplots(1,1)
->>> pcm = ax.imshow(gx, cmap='gray')
+>>> fig = plt.figure(num='Image Gradient')       # Create a figure names "Image Gradient"
+>>> ax = fig.subplots(1,1)                       # Divide into 1x1 set of axes (could make more)
+>>> pcm = ax.imshow(gx, cmap='gray')             # Show gx with a grayscale colormap
 >>> ax.axis('off')
 >>> plt.title('Horizontal Gradient')
->>> cbax = fig.add_axes([0.8, 0.1, 0.05, 0.8])
->>> plt.colorbar(pcm, cax=cbax)
->>> plt.show()
+>>> cbax = fig.add_axes([0.8, 0.1, 0.05, 0.8])   # Add an axes at location (0.8, 0.1) for our colorbar
+>>> plt.colorbar(pcm, cax=cbax)                  
+>>> plt.show()                                   # Render the plot and wait for user to kill it
 ```
 The result is an image like this:
 
@@ -242,30 +258,36 @@ array([[5., 2., 0.],
        [4., 2., 2.],
        [5., 2., 0.]])
 ```
-For this to operate elementwise, it is important that `points` and `opoints` are the same size.  Now, let's say we want to translate `spoints` by a single 3-vector:
+For this to operate elementwise, it is important that `points` and `opoints` are the same shape.  Now, let's say we want to translate `spoints` by a single 3-vector:
 ```
 >>> t = np.array([1.,4.,9.]) 
 ```
-How might we add `t` to `spoints`?  
+How might we add `t` to `spoints` so that it is added to each 3D point?  
 
-One way would be to stack 4 copies of `t` along `axis=0` to create a new `4 X 3` matrix and then do an elementwise addition.  For small arrays this is okay, but can be quite inefficient for large arrays.  A better way is through **broadcasting**.  
+One way would be to stack 4 copies of `t` along `axis=0` to create a new `4 X 3` matrix and then do an elementwise addition.  This works, but is tedious, and could be inefficient depending how it is done.  A better way is through **broadcasting**.  
 
-I will describe broadcasting for adding two `N` dimensional arrays `A` and `B`, although broadcasting also applies to other elementwise operations like multiplication and division.  To add `A` and `B`, the size of each corresponding dimension must be the same **OR** if any dimension sizes differ, then one of the sizes must be 1.  What happens is that `A` and `B` are replicated along any singleton dimension to the size of the other.  
+I will describe broadcasting for adding two rank `N` arrays, `A` and `B`. (The same principles apply to other elementwise operations like multiplication and division.)  To add `A` and `B`: 
+* The size of each corresponding dimension must be the same 
 
-Let's look at some examples
+**OR** 
+* If any dimension sizes differ, then one of the corresponding sizes must be 1.  
+
+Any dimension of `A` or `B` that is 1 causes the array to be replicated along that dimension to equal the size of the other. 
+
+Let's look at an example
 ```python
->>> A = np.eye(3)
+>>> A = np.eye(3)                  # A.shape: (3,3)
 >>> A
 array([[1., 0., 0.],
        [0., 1., 0.],
        [0., 0., 1.]])
->>> B = 2*np.arange(3)[:,None]
+>>> B = 2*np.arange(3)[:,None]     # Trick to make 2D array: B.shape: (3,1)
 >>> B
 array([[0],
        [2],
        [4]])
 ```
-The `None` is added to create an extra dimension for the vector. Now let's add these arrays:
+The `[:,None]` adds a new dimension along axis 1 and turns shape of B from `(3,) --> (3,1)`.  Now let's add these arrays:
 ```python
 >>> C = A + B
 >>> C
@@ -273,15 +295,15 @@ array([[1., 0., 0.],
        [2., 3., 2.],
        [4., 4., 5.]])
 ```
-To see what happened, let's compare the shapes of `A`: `(3,3)`, and `B`: `(3,1)`.  Both have the same size for dimension 0, but for dimension 1, `A` has size 3 while `B` has size 1.  This means `B` will be replicated along dimension 1.  That is, the above gives the same result as:
+To see what happened, let's compare the shapes of `A`: `(3,3)`, and `B`: `(3,1)`. Along axis 0, `A` and `B` have the same size.   Along axis 1 `A` has size 3 while `B` has size 1.  This means `B` will be replicated 3 times along axis 1.  So the following operation that will give the same result as broadcasting is:
 ```python
->>> C = A + np.repeat(B,3,axis=1)
+>>> C = A + np.repeat(B,3,axis=1)         # Explicitly replicate along axis 1
 >>> C
 array([[1., 0., 0.],
        [2., 3., 2.],
        [4., 4., 5.]])
 ```
-Using broadcasting this can be done more efficiently and without allocated extra temporary memory with the `repeat()` method.   And broadcasting works for arrays of any number of dimensions.  
+Using broadcasting this can be done more succinctly.   And broadcasting works for arrays of any number of dimensions.  
 
 There is one more detail.  If `A` or `B` has fewer dimensions than the other, then additional leading dimensions of size 1 are added so that both arrays have the same number of dimensions.  Let's consider some examples and whether `A` and `B` can be broadcast to create `C`:
 
@@ -314,7 +336,9 @@ array([[ 6.,  6.,  9.],
        [ 5.,  6., 11.],
        [ 6.,  6.,  9.]])
 ```
-What is happening here?  `spoints` is size `(4,3)` while `t` is size `(3)`.  When added, `t` is first converted to size `(1,3)`, and then replicated four times along the first dimension and then added.  Thus each of the four 3D points is translated by `t` by leveraging broadcasting.
+What is happening here?  `spoints` is size `(4,3)` while `t` is size `(3,)`.  During broadcasting, `t` is first converted to size `(1,3)`, and then replicated four times along dimension 0 and then added.  Thus `t` is added to each of the four 3D points, effectively translating them by `t`. 
+
+Broadcasting is useful not only for operating on point cloud arrays, but also on image arrays.
 
 
 ___
