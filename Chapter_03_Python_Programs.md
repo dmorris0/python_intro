@@ -2,7 +2,7 @@
 
 ## Interactive Terminal
 
-In your shell type `python` like this:
+In your shell type `python` to start an interactive terminal.  (Note that if you are using Ubuntu and are not running a virtual environment, then to run Python type `python3`.)
 ```
 $ python
 Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
@@ -19,6 +19,8 @@ And use the `print()` function:
 >>> print("Hello Class")
 Hello Class
 ```
+
+
 
 ## Variables
 
