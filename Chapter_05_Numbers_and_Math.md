@@ -1,6 +1,7 @@
 # Chapter 5: Numbers and Math
 
 ## Integers and Floating Point Numbers
+Numbers without decimals default to integers:
 ```python
 >>> type(1)
 <class 'int'>
@@ -72,7 +73,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ZeroDivisionError: division by zero
 ```
-* Exponents
+* Exponents: `a ** b` means `a` raised to the power of `b`
 ```python
 >>> 2 ** 2
 4
@@ -89,33 +90,30 @@ ZeroDivisionError: division by zero
 * Order of precedence:
    * Operators `*`, `/`,`//`, and `%` all have equal precendence and are higher than `+` and `-`.
 
-* Try Exercise 5.3
-
-* Optional: Review Section 5.4 to understand this:
+* Optional: Review Section 5.4 of the book to understand this:
 ```python
 >>> 0.1 + 0.3
 0.4
 >>> 0.1 + 0.2
 0.30000000000000004
 ```
-* Rounding
+* Rounding for numbers ending in the digit `5` 
 ```python
->>> round(2.5)
+>>> round(2.5)        # Round down if digit to the left is even
 2
->>> round(3.5)
+>>> round(3.5)        # Round up if digit to the left is odd
 4
 ```
-If the digit to the left of the `5` is even, then rounds down and if odd then rounds up.
+If the digit to the left of the `5` is even, then rounds down and if odd then rounds up.  Try this example:
 ```python
 >>> round(1.2345, 3)
-
 ```
-* Absolute number
+* Absolute numbers
 ```python
 >>> abs(3)
 3
 >>> abs(-5.0)
--5.0
+5.0
 ```
 * Power `pow` is the same as `**` and has 2 arguments:
 ```python
@@ -127,7 +125,7 @@ With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`, where `%` is 
 >>> pow(2, 3, 3)
 2
 ```
-* Printing Numbers
+* Printing numbers with `f`-strings is convenient.  Precede the first quote with an `f` and use curly braces to insert variables and notation:
 ```python
 >>> n = 1.2468
 >>> f"n is {n}"

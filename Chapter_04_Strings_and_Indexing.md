@@ -1,6 +1,6 @@
 # Chapter 4: Strings and Indexing
 
-The object `"Hello friend"` is a string which you can confirm:
+The object `"Hello friend"` is a string which you can confirm with the `type()` method:
 
 ```python 
 >>> type("Hello friend")
@@ -8,7 +8,7 @@ The object `"Hello friend"` is a string which you can confirm:
 ```
 
 * Stings are defined using single or double quotes
-* Can place single quotes inside double quotes and vice versa
+* You can place single quotes inside double quotes and vice versa:
 ```python
 >>> a = 'Melinda said "Hello!"'
 >>> print(a)
@@ -16,68 +16,70 @@ Melinda said "Hello!"
 ```
 * Strings can be concatenated with a `+`
 ```python
->>> b = "Now goodbye"
+>>> b = "Goodbye"
 >>> c = a + b     # + sign concatenates two strings
 >>> c
-'Melinda said "Hello!"Now goodbye'
->>> print(c)
-Melinda said "Hello!"Now goodbye
+'Melinda said "Hello!"goodbye'
 ```
 * Find the length of a string with the `len()` function:
 ```python
->>> len(a)
-21
+>>> len(b)
+7
 ```
 ## Indexing and Slicing
-Indexing is a key concept and is used extensively not just for strings, but lists and arrays.  It is worth spending some time to get familiary with how Python indexing works.  String indices start at `0` and proceed to the `length-1`. They can also be indexed from `-length` to `-1`.  
-* Example indices for the string `a = 'Melinda said "Hello!"'`, that is length 21:
+Indexing is a key concept and is used extensively not just for strings, but lists and arrays.  It is worth spending some time to get familiary with how Python indexing works.  String indices start at `0` and proceed to the `length-1`. They can also be indexed from `-length` to `-1`.  Here is one way to picture indexing on the string `b = 'Goodbye'` whose length is 7 characters:
+```
+String:  |  G  o  o  d  b  y  e  |  G  o  o  d  b  y  e |
+Indices: | -7 -6 -5 -4 -3 -2 -1  |  0  1  2  3  4  5  6 |
+```
+* Elements can be indexed as follows:
 ```python
->>> a[0]          # First element (for any string)
-'M'
->>> a[1]          # Second element
+>>> b[0]          # First element (for any string)
+'G'
+>>> b[1]          # Second element
+'o'
+>>> b[6]          # Last element (for string of length 7)
 'e'
->>> a[20]         # Last element (for string of length 21)
-'"'
->>> a[-1]         # Last element (for any string)
-'"'
->>> a[-21]        # First element (for string of length 21)
-'M'
+>>> b[-1]         # Last element (for any string)
+'e'
+>>> b[-7]         # First element (for string of length 7)
+'G'
 ```
 * Exceeding the length results in either direction results in an error
 ```python
->>> a[21]
+>>> b[7]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: string index out of range
 ```
-* Using slicing you can select portions of the string using the format `[<start inclusive>:<stop exclusive>]`
+* Using slicing you can select portions of the string using the format `[<start inclusive>:<stop exclusive>]`.  Pay attention to the fact that the elements returned **exclude** the stop element:
 ```python
->>> a[0:2]        # First two elements, i.e. elements 0, 1
-'Me'
->>> a[0:7]        # First seven elements, i.e. elements 0, ..., 6
-'Melinda'
->>> a[15:21]      # Elements 15, ...,  20
-'ello!"'
->>> a[-21:-14]    # For a length 21 string, these are also elements 0, ..., 6
-'Melinda'
+>>> b[0:2]        # First two elements, i.e. elements 0, 1
+'Go'
+>>> b[0:7]        # First seven elements, i.e. elements 0, ..., 6
+'Goodbye'
+>>> b[4:7]        # Elements 4, 5, 6
+'bye'
+>>> b[-7:-3]      # Elements -7, -6, -5, -4
+'Good'
 ```
 * To index from the start, drop the first element. To index to the end, drop the second element.
 ```python
->>> a[:7]         # First 7 elements
-'Melinda'
->>> a[15:]        # Element 15 to the end
-'ello!"'
->>> a[-6:]        # Last 6 elements
-'ello!"'
->>> a[:]          # All elements
-'Melinda said "Hello!"'
+>>> b[:3]         # First 3 elements
+'Goo'
+>>> b[4:]         # Element 4 to the end
+'bye'
+>>> b[-3:]        # Last 3 elements
+'bye'
+>>> b[:]          # All elements
+'Goodbye'
 ```
 * Can optionally set step size to select every n'th element using: `[<start inclusive>:<stop exclusive>:<step size>]`
 ```python
->>> a[0:7:2]      # Every second element of the first 7 elements
-'Mlna'
->>> a[::2]        # Every second element
-'Mlnasi Hlo"'
+>>> b[0:5:2]      # Every second element of the first 5 elements
+'Gob'
+>>> b[::2]        # Every second element
+'Gobe'
 ```
 ## Immutability and Methods
 * Strings are **immutable**. That is, they cannot be changed:

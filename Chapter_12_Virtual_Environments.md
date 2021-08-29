@@ -1,4 +1,4 @@
-# Chapter 16: Virtual Environments
+# Chapter 12: Virtual Environments
 
 ## Why Virtual Environments?
 
@@ -69,6 +69,6 @@ If a different environment appears, click on it, and select the virtual environm
 
 
 ___
-### [Outline](README.md), Next: [Chapter 17: Numpy and Matplotlib](Chapter_17_Numpy_and_Matplotlib.md)
+### [Outline](README.md), Next: [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.md)
 
 

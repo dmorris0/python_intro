@@ -170,5 +170,5 @@ Now add an appropriate import line to `main.py` so that you can call the functio
 It is straightforward to add additional folders and modules to build up complex packages.  It is good practise to keep each module small as this increases flexibility, portability and readability.
 
 ___
-### [Outline](README.md), Next: [Chapter 16: Virtual Environments](Chapter_16_Virtual_Environments.md)
+### [Outline](README.md), Next: [Chapter 12: Virtual Environments](Chapter_12_Virtual_Environments.md)
 

@@ -49,7 +49,7 @@ False
 ```
 The order of precedence can sometimes be important.  The following is the order of precedence:
 
-|Precendence Order, top to bottom |
+|Precendence order, top to bottom |
 |--|
 | <,>,<=,>=,==,!= |
 | not |

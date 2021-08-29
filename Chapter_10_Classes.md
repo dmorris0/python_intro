@@ -1,8 +1,8 @@
 # Chapter 10: Classes
 
-A few examples of a class called `Cat`.  First the simplest class definition:
+A few examples of a class called `Car`.  First the simplest class definition:
 ```python
->>> class Cat:
+>>> class Car:
 ...     pass
 ...
 >>> a = Car()
@@ -14,7 +14,7 @@ False
 ```
 Here `a` and `b` are instances of a `Car` class.  They differ as they are separate blocks of memory.  
 
-Note that Python classes by convention use camelcase, namely with capital letters in each word like this: `SportsCar`.
+**Convention Note**: Python classes (but not variables or functions) use CamelCase, namely with capital letters in each word like this: `SportsCar`.
 
 The Python file `car.py` in the `python` folder has an example of a more involved `Car` class:
 ```python

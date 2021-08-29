@@ -1,5 +1,7 @@
 # Chapter 2: Python and IDE Installation
 
+This chapter gives instructions for installing Python and Visual Studio Code on a Windows PC.  If you are reviewing Python for ECE-CSE 434, you can use Python and VSCode that are preinstalled for Ubuntu in the VDI Remote Desktop.
+
 ## Download Python
 
 Download the latest version of Python from [https://www.python.org/](https://www.python.org/).  These notes assume you have Python 3.8 or later.  Most Windows devices should use the recommended `Windows Installer (64bit)` option.  Downloading from this site will give you the full Python version, rather than the more limited version available in the Windows Store.  The rest of this chapter will describe the Windows installation of Python and VSCode, although a similar process applies to other operating systems.  

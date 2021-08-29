@@ -1,4 +1,4 @@
-# Chapter 17: Mathematical Tools
+# Chapter 13: Mathematical Tools
 
 One of the main reasons Python is so popular is that a vast array of tools easily available and usable directly in the language.  This chapter introduces some key some mathematical packages useful for data science and engineering.  Each tool has its own extensive documentation, and the goal of this chapter is just to motivate you to explore and use these packages.
 
@@ -348,5 +348,5 @@ Broadcasting is useful not only for operating on point cloud arrays, but also on
 
 
 ___
-### [Outline](README.md), Next: [Chapter 18: Conclusion](Chapter_18_Conclusion.md)
+### [Outline](README.md), Next: [Chapter 14: Conclusion](Chapter_14_Conclusion.md)
 

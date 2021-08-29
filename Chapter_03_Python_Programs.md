@@ -20,8 +20,6 @@ And use the `print()` function:
 Hello Class
 ```
 
-
-
 ## Variables
 
 * Variables hold values.  They are strings with numbers and underscores `_`.  They cannot start with a number. 
@@ -37,12 +35,13 @@ Hello Class
 ```
 
 ## Comments
+Comments within your code easier to understand for others and yourself at a later date, especially if you follow Python conventions.
 * Block comments: A newline starting with a `#`.  
 * Inline comments: A `#` will comment out the rest of the line.
-* Conventions:
+* **Conventions**:
   * Write complete sentences
-  * Single space after the `#`
-  * At least 2 spaces before inline `#`
+  * Use a single space after the `#`
+  * At least 2 spaces before an inline `#`
   * Don't describe what is already obvious
     * Ex: if you have the line `number_of_cars = 5`, don't add a comment `# Number of cars`
 
