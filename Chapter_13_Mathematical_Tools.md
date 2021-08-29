@@ -72,24 +72,24 @@ Much easier eh?  And faster to boot!
 
 ## Array Indexing
 
-The same indexing and slicing that we saw used for strings is available for each dimension of Numpy arrays.  Thus, for example we have:
+The same indexing and slicing that we saw used for strings is available for each dimension of Numpy arrays.  Thus, for example, our two-dimension array can be indexed with:
 ```python
 >>> new_point_array[0,0]
 2.0
 >>> new_point_array[0,1]
 1.0
 ```
-The **rank** of an array is the number of dimensions, in this case 2.  The dimensions, or axes as they are called in Numpy, are numbered from left to right.  So the elements of a point, such as `[2., 1., 1.]` are arranged along **axis 1** of the 2D array, and the points are stacked along **axis 0**.  We can access the first point in multiple ways:
+The dimensions, or axes as they are called in Numpy, are numbered from left to right.  So the elements of a point, such as `[2., 1., 1.]` are arranged along **axis 1** of the 2D array, and the points are stacked along **axis 0**.  We can access the first point in multiple ways:
 ```python
->>> new_point_array[0]
+>>> new_point_array[0]             # All elements with index 0 of axis 0
 array([2., 1., 1.])
->>> new_point_array[0,:]
+>>> new_point_array[0,:]           # Equivalent representation is a slice along axis 1
 array([2., 1., 1.])
 ```
 We can access the `X` values by slicing along axis 0 and selecting the first point:
 ```python
->>> new_point_array[:,0]
-array([2., 2., 4., 5.])
+>>> new_point_array[:,0]           # A slice along axis 0 at index 0 of axis 1
+array([2., 2., 4., 5.])    
 ```
 Notice that the slices are returned as 1D arrays.  There are many more details to learn about indexing and adding dimensions to array which you can find in the official documentation: [https://numpy.org/doc/stable/reference/arrays.indexing.html](https://numpy.org/doc/stable/reference/arrays.indexing.html).  I strongly recommend you review this page. 
 
