@@ -25,9 +25,9 @@ ___
 * [Chapter 9: Tuples, Lists and Dictionaries](Chapter_09_Tuples_Lists_and_Dictionaries.md)
 * [Chapter 10: Classes](Chapter_10_Classes.md)
 * [Chapter 11: Modules and Packages](Chapter_11_Modules_and_Packages.md)
-* [Chapter 16: Virtual Environments](Chapter_16_Virtual_Environments.md) `*`
-* [Chapter 17: Mathematical Tools](Chapter_17_Mathematical_Tools.md) `*`
-* [Chapter 18: Conclusion](Chapter_18_Conclusion.md) `*`
+* [Chapter 12: Virtual Environments](Chapter_12_Virtual_Environments.md) `*`
+* [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.md) `*`
+* [Chapter 14: Conclusion](Chapter_14_Conclusion.md) `*`
 
 `*` These chapter topics differ significantly from those in the book.
 
@@ -38,7 +38,7 @@ The notes are self-contained but fairly terse, and are intended for someone vers
 
 The notes are also only a very basic introduction to Python and not comprehensive.  After completing them you should be comfortable programming basic capabililties in Python.  Once you are at that level, it is fairly simple to learn new features to solve a given problem through a Google or StackOverflow search.  
 
-If, on the other hand, you are new to programming, then these notes may be too terse, and it would be preferable to follow the book or do an [online tutorial](https://docs.python.org/3/tutorial/index.html).  Once you have done that, you may still some these notes useful.  
+If, on the other hand, you are new to programming, then these notes may be too terse, and it would be preferable to follow the book or do an [online tutorial](https://docs.python.org/3/tutorial/index.html).    
 
 ___
 ### Next: [Chapter 1: Introduction](Chapter_01_Introduction.md)
