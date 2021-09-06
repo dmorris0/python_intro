@@ -53,7 +53,7 @@ Tuples have a length and can be indexed and sliced just like strings (see Chapte
  ### Iterable
  Tuples are iterable, enabling use in loops such as `for`:
  ```python
->>> my_tuple = tuple("Python")\
+>>> my_tuple = tuple("Python")
 >>> for letter in my_tuple:
 ...     print(letter.upper())
 ...
@@ -172,6 +172,24 @@ The `list.extend(list2)` extends the original list the elements of `list2`
 >>> trees
 ['Pine', 'Spruce', 'Cedar', 'Carob', 'Redwood', 'Apple', 'Orange']
 ```
+
+### Short Diversion with the `+=` Operator
+
+For lists which are mutable, the `+=` operator will extend a list, just like the `.extend()` method, and is an in-place operator.  For example:
+```python
+>>> a, b = [1, 2], [3, 4]
+>>> a += b                # In-place operation extends a
+>>> a
+[1, 2, 3, 4]
+```
+For tuples, which are immutable, the `+=` operator will create a new tuple that is a combination of the base tuples and will overwrite the original tuple.  Here's an example:
+```python
+>>> a, b = (1, 2), (3, 4)
+>>> a += b                # Automatically converted to: a = a + b
+>>> a
+(1, 2, 3, 4)
+```
+While this looks the same as for lists, Python determines that the tuple `a` has no in-place add operation and so instead converts `a += b` to `a = a + b`, which combines the two tuples and then overwrites the original tuple `a` with the combined tuple.
 
 ### Number List Functions
 The functions `sum()`, `max()` and `min()` operate on lists of numbers:

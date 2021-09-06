@@ -7,7 +7,7 @@ The object `"Hello friend"` is a string which you can confirm with the `type()` 
 <class 'str'>
 ```
 
-* Stings are defined using single or double quotes
+* Strings are defined using single or double quotes
 * You can place single quotes inside double quotes and vice versa:
 ```python
 >>> a = 'Melinda said "Hello!"'

@@ -89,9 +89,40 @@ multiply(x, y)
 ```
 So it is a good idea to document each function you write in this way.  For functions with many or complicated arguments, add explanations for each argument.
 
+## Typing
+
+Specifying the types of the input arguments and outputs of a function can make your code easier to understand.  Not only that, the basic concept is quite easy to implement.  Here is a simple modification of the `multiply()` function that illustrates how to specify argument types as well as the output type:
+```python
+def multiply(x: float, y: float) -> float:
+    """ Returns the product of x and y """
+    result = x * y
+    return result
+```
+Note that Python does not impose type constraints during runtime and will not raise a `TypeError` if you input the wrong type and nor will it force the output to be of the specified type.  Those are the programmer's responsibilities.  But they do make it easier to decipher what the code is expecting, which you'll find is often a big help in using functions.  
+
+There are many more details to specifying types such as multiple types, lists, callable functions etc., which you can find here: [https://docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html).
+
+## Default Parameter Values
+
+Function parameters can have default values and this makes them optional parameters.  In the above example, if you called `muliply(3.)`, you would get an error as `y` is a required parameter.  Let's say we defined our function as:
+```python
+def multiply(x, y=1):
+    """ Returns the product of x and y """
+    result = x * y
+    return result
+```
+Then `y` has a default value of `1` and is optional.  Note that optional parameters need to be specified *after* all the required parameters.  If you want to specify types, you would write this function as:
+```python
+def multiply(x: float, y: float=1) -> float:
+    """ Returns the product of x and y """
+    result = x * y
+    return result
+```
+
 ## Practice:
 
 Create a function called `divide(x,y)` in `arithmetic.py` that returns `x/y`.  Confirm that you can import and use it.
+
 
 ## While Loops
 
