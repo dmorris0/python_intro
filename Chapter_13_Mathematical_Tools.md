@@ -14,7 +14,7 @@ One of the main reasons Python is so popular is that a vast array of tools easil
 
 ## Installation and Help
 
-It is best to install these tools in a virtual environment, see [Chapter 12](Chapter_12_Virtual_Environment.md).  First **activate** your virtual environment and then, from the shell command line, install them with
+It is best to install these tools in a virtual environment, see [Chapter 12](Chapter_12_Virtual_Environments.md).  First **activate** your virtual environment and then, from the shell command line, install them with
 ```
 python -m pip install numpy scipy matplotlib opencv-python
 ```
