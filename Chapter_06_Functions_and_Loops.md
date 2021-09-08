@@ -113,7 +113,7 @@ def multiply(x, y=1):
 ```
 Then `y` has a default value of `1` and is optional.  Note that optional parameters need to be specified *after* all the required parameters.  If you want to specify types, you would write this function as:
 ```python
-def multiply(x: float, y: float=1) -> float:
+def multiply(x: float, y: float=1.) -> float:
     """ Returns the product of x and y """
     result = x * y
     return result
