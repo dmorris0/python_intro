@@ -91,7 +91,7 @@ So it is a good idea to document each function you write in this way.  For funct
 
 ## Executing Python Files
 
-Have a look at the provided Python file [Python/arithmetic.py](Python/arithmetic.py), and notice the line:
+Have a look at the provided Python file [Python/arithmetic.py](Python/arithmetic.py), and notice the line below the function definitions:
 ```python
 if __name__=="__main__":
 ```
@@ -99,7 +99,7 @@ This enables the file to do double duty.  You can import function or class defin
 ```bash
 python arithmetic.py
 ```
-When the file is executed like this or run in the debugger, all the functions and classes are defined, and then everything below this condition line is also run.  I find this quite useful for including tests of the functions defined earlier in the file.  Try out the above command.
+When the file is executed like this or run in the debugger, first all the functions and classes are defined, and then everything below this condition line is also run.  I find this quite useful for including tests of the functions defined earlier in the file.  Try out the above command.
 
 ## Typing
 
