@@ -103,7 +103,7 @@ In this case `__name__` is not `"__main__"` and the condition is false.  Alterna
 ```bash
 python arithmetic.py
 ```
-In this case `__name__` is set to `"__main__"`, and so the functions will be defined **and** everything below this condition line will also execute.  For packages I find this quite useful as a way to include debugging tests of the functions defined earlier in the file.  For example, try out the above command.
+In this case `__name__` is set to `"__main__"`, and so the functions will be defined **and** everything below this condition line will also execute.  For packages I find this quite useful as a way to include debugging tests of the functions defined earlier in the file.  For example, try executing `arithmetic.py` with the above command.
 
 ## Typing
 
