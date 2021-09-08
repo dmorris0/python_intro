@@ -13,6 +13,11 @@ def sum_to_n(n):
     return sum_val
 
 if __name__ == "__main__":
+    # The above line allows this file to do double duty.  
+    # 1) It can act as a package defining functions or class definitions above that can be imported by other python files
+    #    In this case what is below is ignored.
+    # 2) This file can run in a debugger or called directly using: python filename.py
+    #    In this case all the classes / functions above are defined, and then the code below is executed.
     
     a, b = 3, 4
     print(f"Testing multiply({a},{b}) = {multiply(a,b)}")
