@@ -89,6 +89,18 @@ multiply(x, y)
 ```
 So it is a good idea to document each function you write in this way.  For functions with many or complicated arguments, add explanations for each argument.
 
+## Executing Python Files
+
+Have a look at the provided Python file [Python/arithmetic.py](Python/arithmetic.py), and notice the line:
+```python
+if __name__=="__main__":
+```
+This enables the file to do double duty.  You can import function or class definitions from it, and everything below this line is ignored.  Or you can run this from the command line (from within the same folder) like this:
+```bash
+python arithmetic.py
+```
+When the file is executed like this or run in the debugger, all the functions and classes are defined, and then everything below this condition line is also run.  I find this quite useful for including tests of the functions defined earlier in the file.  Try out the above command.
+
 ## Typing
 
 Specifying the types of the input arguments and outputs of a function can make your code easier to understand.  Not only that, the basic concept is quite easy to implement.  Here is a simple modification of the `multiply()` function that illustrates how to specify argument types as well as the output type:
