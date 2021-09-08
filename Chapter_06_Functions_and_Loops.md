@@ -106,12 +106,12 @@ There are many more details to specifying types such as multiple types, lists, c
 
 Function parameters can have default values and this makes them optional parameters.  In the above example, if you called `muliply(3.)`, you would get an error as `y` is a required parameter.  Let's say we defined our function as:
 ```python
-def multiply(x, y=1):
+def multiply(x, y=1.):
     """ Returns the product of x and y """
     result = x * y
     return result
 ```
-Then `y` has a default value of `1` and is optional.  Note that optional parameters need to be specified *after* all the required parameters.  If you want to specify types, you would write this function as:
+Then `y` has a default value of `1.` and is optional.  Note that optional parameters need to be specified *after* all the required parameters.  If you want to specify types, you would write this function as:
 ```python
 def multiply(x: float, y: float=1.) -> float:
     """ Returns the product of x and y """
