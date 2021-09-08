@@ -95,11 +95,15 @@ Have a look at the provided Python file [Python/arithmetic.py](Python/arithmetic
 ```python
 if __name__=="__main__":
 ```
-This enables the file to do double duty.  You can import function or class definitions from it, and everything below this line is ignored.  Or you can run this from the command line (from within the same folder) like this:
+This enables the file to do double duty as a package and as an executable.  When using it as a package, you can import functions or class definitions defined above this line in this file.  For example:
+```python
+from arithmetic import multiply
+```
+In this case `__name__` is not `"__main__"` and the condition is false.  Alternatively, you can run this file in a debugger or execute it from the command line like this:
 ```bash
 python arithmetic.py
 ```
-When the file is executed like this or run in the debugger, first all the functions and classes are defined, and then everything below this condition line is also run.  I find this quite useful for including tests of the functions defined earlier in the file.  Try out the above command.
+In this case `__name__` is set to `"__main__"`, and so the functions will be defined **and** everything below this condition line will also execute.  For packages I find this quite useful as a way to include debugging tests of the functions defined earlier in the file.  For example, try out the above command.
 
 ## Typing
 
