@@ -18,12 +18,12 @@ This command is in Windows PowerShell, but the same command works in other syste
 
 ## Activate a Virtual Environment
 
-To use a Virtual Environment you must activate it.  The `activate` script is located here: `envs/av/Scripts/activate`.  Simply call this script to start your environment.  For example, if you are located in the folder containing the `envs` folder, simply type:
+To use a Virtual Environment you must activate it.  In Windows the `activate` script is located in the `Scripts` subfolder, and for our case: `envs/av/Scripts/activate`.  Simply call this script to start your environment.  For example, if you are located in the folder containing the `envs` folder, simply type:
 ```
 PS C:\Users\morri\source> ./envs/av/Scripts/activate
 (av) PS C:\Users\morri\source>
 ```
-In Linux you would type: `source envs/av/Scripts/activate`.  Notice that once a virtual environment has been activated, each line with begin with the environment name in parentheses.  This tells you that if you install python packages, they will be installed for that virtual environment, and if you start Python, you'll be starting in that environment.
+In Linux you would type: `source envs/av/bin/activate`.  Notice that once a virtual environment has been activated, each line with begin with the environment name in parentheses.  This tells you that if you install python packages, they will be installed for that virtual environment, and if you start Python, you'll be starting in that environment.
 
 Note: PowerShell by default does not permit running scripts, and may give you an error saying scripts are disabled for the system.  A page describing this issue is here: https://adamtheautomator.com/run-powershell-script/.  In summary, you can enable scripts as follows:
 1. Run a PowerShell with administrative priviledges
