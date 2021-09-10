@@ -52,7 +52,7 @@ Now lets convert our list of lists to a Numpy array:
 ```python
 >>> import numpy as np
 >>>
->>> point_array = np.asarray(point_list)
+>>> point_array = np.array(point_list)
 >>> point_array
 array([[1., 0., 0.],
        [1., 2., 1.],
