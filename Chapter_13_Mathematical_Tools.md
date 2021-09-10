@@ -171,19 +171,19 @@ These three values are the (blue, green, red) values for that pixel.  Review Num
 
 Let's say our goal is to find the horizontal image gradient of the grayscale version of this image.  Here are the steps we would take.
 ```python
->>> img = img.astype(np.float32) / 255 
+>>> img = img / 255 
 ```
-This converts to 32-bit floating point array and scales to a range of 0 to 1, which is the usual range for floating point images.  It is best to use floating point rather than unsigned integers because the grdient can be negative or could be larger than the maximum `uint8` value of 255.  Operating in `uint8` will result in gradients being clipped.  Confirming our new data type:
+This converts a floating point array and scales to a range of 0 to 1, which is the usual range for floating point images.  It is best to use floating point rather than unsigned integers because the gradient can be negative or could be larger than the maximum `uint8` value of 255.  Operating in `uint8` will result in gradients being clipped.  Confirming our new data type:
 ```python
 >>> img.dtype
-dtype('float32')
+dtype('float64')
 ```
 
 Next, convert the image to grayscale with `cvtColor`, which is a general purpose colorspace transformation utility:
 ```python
->>> gimg = cv.cvtColor(img, cv.COLOR_BGR2GRAY)  # Convert 3-channel color to single-channel grayscale
+>>> gimg = cv.cvtColor(img.astype(np.float32), cv.COLOR_BGR2GRAY)  # Convert 3-channel color to single-channel grayscale
 ```
-This grayscale image is the same size, except with a single channel:
+If you do `help(cv.cvtColor)` you will see that `cvtColor` requires floating-bit arrays be 32-bit, while `img` is 64-bit, so we passed in a 32-bit version of `img`.  This grayscale image is the same size, except with a single channel:
 ```python
 >>> gimg.shape
 (247, 160)
