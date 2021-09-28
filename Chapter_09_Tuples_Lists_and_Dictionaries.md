@@ -235,6 +235,43 @@ List comprehension can be applied to lists of lists.  For example say we wish to
 [2, 4, 6, 1, 3, 8, 10, 12, 14]
 ```
 
+### Iterate Over a List
+
+While list comprehension operates over each element of a list, sometimes we need to do more complex operations over each element of a list.  A simple `for` loop (like we saw in Chapter 5) enables this:
+```python
+>>> fruit_list = ['apples','bananas','oranges']
+>>> for fruit in fruit_list:
+...     print(fruit)
+...
+apples
+bananas
+oranges
+```
+### `enumerate()` Function
+In this loop there is not index, which is often a good thing, but sometimes we need an index.  This can be achieved with the `enumerate()` function which returns a tuple `(index, list_item)` when iterated.  Here is an example:
+```python
+>>> fruit_list = ['apples','bananas','oranges']
+>>> for i,fruit in enumerate(fruit_list):
+...     print(f'{i}. {fruit}')
+...
+0. apples
+1. bananas
+2. oranges
+```
+### `zip()` Function
+If we have two (or more) lists of the same length, we can iterate over them together using the `zip()` function which collates together into a tuple corresponding elements of each list passed into it.  Here is an example:  
+```python
+>>> fruit_list = ['apples','bananas','oranges']
+>>> price_list = [1.5, 0.9, 2.0]
+>>> for fruit,price in zip(fruit_list, price_list):
+...     print(f'{fruit} cost ${price}')
+...
+apples cost $1.5
+bananas cost $0.9
+oranges cost $2.0
+```
+
+
 ### Copying Lists
 
 Assignment is not the same thing as copying.  
