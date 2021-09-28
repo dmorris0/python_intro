@@ -221,10 +221,18 @@ An element of a list can be another list.  For example:
 >>> listx2 = [[0,1], [2,3], [4,5]]
 >>> listx2
 [[0, 1], [2, 3], [4, 5]]
->>> listx2[0]
+>>> listx2[0]         # Zeroth element is a list
 [0, 1]
->>> listx2[0][1]
+>>> listx2[0][1]      # Element 1 of zeroth list 
 1
+```
+
+List comprehension can be applied to lists of lists.  For example say we wish to flatten a list of lists into a single list we can do the following:
+```python
+>>> list_of_lists = [[2,4,6], [1,3], [8,10,12,14]]
+>>> new_list = [item for sublist in list_of_lists for item in sublist]
+>>> new_list
+[2, 4, 6, 1, 3, 8, 10, 12, 14]
 ```
 
 ### Copying Lists
