@@ -270,7 +270,7 @@ apples cost $1.5
 bananas cost $0.9
 oranges cost $2.0
 ```
-
+Note that a better way to represent the above data is with a dictionary linking each fruit to its price, rather than two lists.  Dictionaries are described below.
 
 ### Copying Lists
 
