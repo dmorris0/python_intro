@@ -221,11 +221,56 @@ An element of a list can be another list.  For example:
 >>> listx2 = [[0,1], [2,3], [4,5]]
 >>> listx2
 [[0, 1], [2, 3], [4, 5]]
->>> listx2[0]
+>>> listx2[0]         # Zeroth element is a list
 [0, 1]
->>> listx2[0][1]
+>>> listx2[0][1]      # Element 1 of zeroth list 
 1
 ```
+
+List comprehension can be applied to lists of lists.  For example say we wish to flatten a list of lists into a single list we can do the following:
+```python
+>>> list_of_lists = [[2,4,6], [1,3], [8,10,12,14]]
+>>> new_list = [item for sublist in list_of_lists for item in sublist]
+>>> new_list
+[2, 4, 6, 1, 3, 8, 10, 12, 14]
+```
+
+### Iterate Over a List
+
+While list comprehension operates over each element of a list, sometimes we need to do more complex operations over each element of a list.  A simple `for` loop (like we saw in Chapter 5) enables this:
+```python
+>>> fruit_list = ['apples','bananas','oranges']
+>>> for fruit in fruit_list:
+...     print(fruit)
+...
+apples
+bananas
+oranges
+```
+### `enumerate()` Function
+In this loop there is not index, which is often a good thing, but sometimes we need an index.  This can be achieved with the `enumerate()` function which returns a tuple `(index, list_item)` when iterated.  Here is an example:
+```python
+>>> fruit_list = ['apples','bananas','oranges']
+>>> for i,fruit in enumerate(fruit_list):
+...     print(f'{i}. {fruit}')
+...
+0. apples
+1. bananas
+2. oranges
+```
+### `zip()` Function
+If we have two (or more) lists of the same length, we can iterate over them together using the `zip()` function which collates together into a tuple corresponding elements of each list passed into it.  Here is an example:  
+```python
+>>> fruit_list = ['apples','bananas','oranges']
+>>> price_list = [1.5, 0.9, 2.0]
+>>> for fruit,price in zip(fruit_list, price_list):
+...     print(f'{fruit} cost ${price}')
+...
+apples cost $1.5
+bananas cost $0.9
+oranges cost $2.0
+```
+Note that a better way to represent the above data is with a dictionary linking each fruit to its price, rather than two lists.  Dictionaries are described below.
 
 ### Copying Lists
 
