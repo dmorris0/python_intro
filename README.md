@@ -28,6 +28,7 @@ ___
 * [Chapter 12: Virtual Environments](Chapter_12_Virtual_Environments.md) `*`
 * [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.md) `*`
 * [Chapter 14: Conclusion](Chapter_14_Conclusion.md) `*`
+* [Appendix 1: Solving Linear Equations](Appendix_01_Linear_Equations.md) `*`
 
 `*` These chapter topics differ significantly from those in the book.
 
