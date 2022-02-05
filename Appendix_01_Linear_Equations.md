@@ -4,13 +4,13 @@ This is a self-contained appendix describing how one can use Python to solve sys
 
 ## Problem Statement
 
-Assume we have $N$ unknown variables which we collect in a vector $x = [x_1,x_2,...,x_N]$.  Further assume we have $N$ independent equations in these unknown variables.  These equations can be organized into the following standard form:
+Assume we have $N$ unknown variables which we collect in a vector <img src="https://render.githubusercontent.com/render/math?math=x=[x_1,x_2,...,x_N]">.  Further assume we have $N$ independent equations in these unknown variables.  These equations can be organized into the following standard form:
 
-$A x = b$
+<img src="https://render.githubusercontent.com/render/math?math=Ax=b">
 
 where $A$ is a $N\times N$ square matrix, and $b$ is a $N$ vector.  Together $A$ and $b$ contain the known coefficients in the $N$ equations.  If $A$ is full rank, this can be solved by left multiplying by the inverse of $A$ to give:
 
-$x = A^{-1} b$
+<img src="https://render.githubusercontent.com/render/math?math=x=A^{-1}b">
 
 For large matrices, this is inefficient and there are faster numerical methods that solve these equations and give the same result.  We will use one such tool available in the Numpy package.
 
