@@ -2,18 +2,19 @@
 
 This is a self-contained appendix describing how one can use Python to solve systems of linear equations.  It does not assume any experience with Python, and provides the basic steps for someone solve linear equations using use Python.  
 
+___
 ## Problem Statement
 
 Assume we have `N` unknown variables which we collect in a vector <img src="https://render.githubusercontent.com/render/math?math=x=[x_1,x_2,...,x_N]">.  Further assume we have `N` independent linear equations in these unknown variables.  These equations can be organized into the following standard form:
 
 <img src="https://render.githubusercontent.com/render/math?math=Ax=b">
 
-where `A` is a `N` X `N` square matrix containing the coefficients of `x`, and `b` is a `N` vector containing constants in these equations.  Both `A` and `b` are known.  If `A` is full rank, this matrix equation can be solved by left multiplying by the inverse of `A` to give:
+where `A` is a `N` X `N` square matrix containing the coefficients of `x`, and `b` is a length `N` vector containing constants in these equations.  Both `A` and `b` are known.  If `A` is full rank, this matrix equation can be solved by left multiplying by the inverse of `A` to give:
 
 <img src="https://render.githubusercontent.com/render/math?math=x=A^{-1}b">
 
-For large matrices, this is inefficient and there are faster numerical methods that solve these equations and give the same result.  We will use one such tool available in the Numpy package.
-
+For large matrices, this is inefficient and there are faster numerical methods that solve this equation and give the same result.  We will use one such tool available in the Numpy package.
+___
 ## Set up Python
 
 1. Ensure you have a working Python 3 install, see [Chapter 2](Chapter_02_Installation_and_IDE.md).  There's no need to install an integrated developer environment (IDE) as shown in this chapter.
@@ -38,6 +39,7 @@ This creates an interactive environment with the prompt: `>>>`.
 ```
 If there is an error, something went wrong installing the numpy package.  Type `exit()` to quit Python and make sure Numpy successfully installs.  
 
+___
 ## Example System of Equations
 
 We will show how to solve a system of linear equations with an example.  Let's say you wanted to solve for three unknown parameters and your `A` matrix, which must be `3` X `3`, is the following: 
@@ -50,7 +52,9 @@ and your `3`-vector `b` is:
 ```
 [ 2, -1,  1]
 ```
-The following are the steps to do this, once you have started Python and imported Numpy (as shown above):
+___
+## Steps to Solve for `x`
+The following are the steps to solve for x.  Once you have started Python and imported Numpy (as shown above):
 
 1. Create `A` and `b` as Numpy arrays:
 ```
