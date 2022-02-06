@@ -36,11 +36,11 @@ This creates an interactive environment with the prompt: `>>>`.
 ```
 >>> import numpy as np
 ```
-If there is an error, something went wrong installing the numpy package.  Type `exit()` to quit Python and make sure numpy successfully installs.  
+If there is an error, something went wrong installing the numpy package.  Type `exit()` to quit Python and make sure Numpy successfully installs.  
 
 ## Example System of Equations
 
-We will show how to solve a system of linear equations with an example.  Let's say you wanted to solve for three unknown parameters and your `3` X `3` `A` matrix is the following: 
+We will show how to solve a system of linear equations with an example.  Let's say you wanted to solve for three unknown parameters and your `A` matrix, which must be `3` X `3`, is the following: 
 ```
 [[ 3, -2,  0],
  [-2,  4, -1],
@@ -52,7 +52,7 @@ and your `3`-vector `b` is:
 ```
 The following are the steps to do this, once you have started Python and imported Numpy (as shown above):
 
-1. Create `A` and `b` as numpy arrays as follows:
+1. Create `A` and `b` as Numpy arrays:
 ```
 >>> A = np.array( [[3,-2,0],[-2,4,-1],[0,-1,5]] )
 >>> b = np.array( [2,-1,1] )
@@ -67,20 +67,20 @@ array([[ 3, -2,  0],
 array([ 2, -1,  1])
 ```
 
-2. Use Numpy to solve for the unknown vecto `x`:
+2. Use Numpy to solve for the unknown vector `x`:
 ```
 >>> x = np.linalg.solve(A, b)
 >>> x
 array([0.81081081, 0.21621622, 0.24324324])
 ```
-There you go -- you've solved for the 3 unknown parameters with a couple lines of code!  The same method will work for any number of unknowns, as long as you have the same number of equations. You can find online documentation for the [solve](https://numpy.org/doc/stable/reference/generated/numpy.linalg.solve.html) function and other Numpy functions. 
+There you go -- you've solved for the 3 unknown parameters with a couple lines of code!  The same method will work for `N` of any size, as long as `A` and `b` are the correct size. Additional documentation for [solve](https://numpy.org/doc/stable/reference/generated/numpy.linalg.solve.html) and other Numpy functions is online.
 
 3. It is always a good idea to sanity check your result.  If we do a matrix multiplication: `Ax`, with the calculated `x`, then this should give us `b` (from the top equation).  Let's confirm this as follows:
 ```
 >>> np.matmul(A, x)
 array([ 2., -1.,  1.])
 ```
-And yes, this is the same as the `b` vector we set above, confirming that we obtained the correct `x`.  And finally, to exit the interactive Python type:
+And yes, this is the same as the `b` vector we set above, confirming that we obtained the correct `x`.  Finally, to exit the interactive Python type:
 ```
 >>> exit()
 ```
