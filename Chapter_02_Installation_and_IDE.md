@@ -27,7 +27,7 @@ These notes will use VSCode.  Download and install it from: [https://code.visual
 
 ### The Python Extension
 
-VSCode supports Python formatting and color-coding through and extension.  To install the Python extension, click on the Extensions icon on the left, type `python`, select the top item from Microsoft, and click on install.
+VSCode supports Python formatting and color-coding through an optional extension.  To install the Python extension, click on the Extensions icon on the left, type `python`, select the top item from Microsoft, and click on install.
 
 ![Python in VSCode](.Images/vs_python.png)
 
@@ -41,17 +41,7 @@ Then from in the terminal type `python`
 
 ![Python in Terminal](.Images/vs_terminal_2.png)
 
-Note: if you have installed Python while VSCode is running, then Python may not be in your path.  You can simply restart VSCode, and that should solve it.
-
-You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer.  The terminal defaults to PowerShell, which sometimes does not work well with Python.  If you have difficulties with running Python in PowerShell, you can switch to the Command shell from the pulldown menu on the top-right of the terminal panel (to the right of the `+` sign).
-
-To make the `Command Prompt` default instead of `PowerShell`, do the following:
-1. Press `Ctrl` + `Shift` + `p`
-2. Type `profile` in the text box
-3. Select `Terminal: Select Default Profile`
-4. Select `Command Prompt`
-
-You will need to restart VSCode for this to take effect.
+Note: if you have installed Python while VSCode is running, then Python may not be in your path.  You can simply restart VSCode, and that should solve it.  You can use Python within a VSCode terminal, or a separate terminal window; whichever you prefer. 
 
 ### View Notes in VSCode
 

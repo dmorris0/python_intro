@@ -74,7 +74,7 @@ IndexError: string index out of range
 >>> b[:]          # All elements
 'Goodbye'
 ```
-* Can optionally set step size to select every n'th element using: `[<start inclusive>:<stop exclusive>:<step size>]`
+* You can optionally set a step size to select every n'th element using: `[<start inclusive>:<stop exclusive>:<step size>]`
 ```python
 >>> b[0:5:2]      # Every second element of the first 5 elements
 'Gob'
@@ -148,7 +148,7 @@ Or convert the number to a string:
 >>> "I ate " + str(n1) + " apples and " + str(n2) + " oranges" 
 'I ate 10 apples and 5 oranges'
 ```
-Using `f-strings` is often simpler and preferable for converting strings to numbers:
+Using `f-strings` is often simpler and preferable for converting numbers to strings, such as when you want to display them:
 ```python
 >>> f"I ate {n1} apples and {n2} oranges"
 'I ate 10 apples and 5 oranges'
