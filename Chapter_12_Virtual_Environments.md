@@ -25,7 +25,7 @@ PS C:\Users\morri\source> ./envs/av/Scripts/activate
 ```
 In Linux you would type: `source envs/av/bin/activate`.  Notice that once a virtual environment has been activated, each line with begin with the environment name in parentheses.  This tells you that if you install python packages, they will be installed for that virtual environment, and if you start Python, you'll be starting in that environment.
 
-Note: PowerShell by default does not permit running scripts, and may give you an error saying scripts are disabled for the system.  A page describing this issue is here: https://adamtheautomator.com/run-powershell-script/.  In summary, you can enable scripts as follows:
+Note: PowerShell by default does not permit running scripts, and may give you an error saying scripts are disabled for the system, see https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies.  You can enable scripts as follows:
 1. Run a PowerShell with administrative priviledges
 2. Call this command: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
