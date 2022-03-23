@@ -27,7 +27,7 @@ In Linux you would type: `source envs/av/bin/activate`.  Notice that once a virt
 
 Note: PowerShell by default does not permit running scripts, and may give you an error saying scripts are disabled for the system.  A page describing this issue is here: https://adamtheautomator.com/run-powershell-script/.  In summary, you can enable scripts as follows:
 1. Run a PowerShell with administrative priviledges
-2. Call this command: `Set-ExecutionPolicy RemoteSigned`
+2. Call this command: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
 After doing this you should be able to activate your virtual environment.
 
