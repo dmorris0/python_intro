@@ -29,6 +29,7 @@ ___
 * [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.md) `*`
 * [Chapter 14: Conclusion](Chapter_14_Conclusion.md) `*`
 * [Appendix 1: Solving Linear Equations](Appendix_01_Linear_Equations.md) `*`
+* [Appendix 2: Data Series and Plotting](Appendix_02_Data_and_Plotting.ipynb) `*`
 
 `*` These chapter topics differ significantly from those in the book.
 

@@ -97,5 +97,5 @@ And yes, this is the same as the `b` vector we set above, confirming that we obt
 >>> exit()
 ```
 ___
-### [Outline](README.md)
+### [Outline](README.md), Next: [Appendix 2: Data Series and Plotting](Appendix_02_Data_and_Plotting.ipynb)
 
