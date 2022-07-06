@@ -6,21 +6,21 @@ Python leaves much of its functionality to libraries.  Python code will import a
 
 While this availability of a vast number of packages is the power of Python, it also creates compatibility problems.  Packages have many versions, and many versions of many packages are not compatible with each other.  To some extent, version compatibility can be handled by the installer, but package incompatibility means there are certain packages that cannot be installed at the same time.
 
-The consequence of this incompatibility dilemma is that it is best that you do **not** install Python packages directly in the base environment.  Instead, create multiple separate environments, and install the packages you need within each environment.  There are tools for creating what are called *virtual environments* and easily switching between them.  Instructions for one method are given below. 
+The consequence of this incompatibility dilemma is that it is best that you do **not** install Python packages directly in the base Python environment.  Instead, create multiple separate virtual environments, and install the packages you need within each virtual environment.  It is easy to create virtual environments and to switch between them.  Instructions are given below. 
 
 ## Create a Virtual Environment
 
-Likely you will create multiple virtual environments, so create a folder to store them.  I typically create a folder called `envs` in my `home` folder or in my `source` folder (depending if I'm in Linux or Windows).  Use `cd` to enter this folder in your terminal and then create a virtual environment with:
+Likely you will create multiple virtual environments, so I recommend creating a folder to store them.  I typically create a folder called `envs` in my `home` folder or in my `source` folder (depending if I'm in Linux or Windows).  Use `cd` to enter this folder in your terminal and then create a virtual environment with:
 ```
 PS C:\Users\morri\source\envs> python -m venv av
 ```
-This command is in Windows PowerShell, but the same command works in other systems, with the exception that you may need to call `python3` rather than `python`.  This will create a virtual environment called `av`.  If you look in your `envs` folder you will see an `av` folder that contains details of the `av` virtual environment.  
+This command is in Windows PowerShell, but the same command works in other systems, with the exception that you may need to call `python3` rather than `python` in Linux.  This will create a virtual environment called `av`.  If you look in your `envs` folder you will see an `av` folder that contains details of the `av` virtual environment.  
 
 ## Activate a Virtual Environment
 
 To use a Virtual Environment you must activate it.  In Windows the `activate` script is located in the `Scripts` subfolder, and for our case: `envs/av/Scripts/activate`.  Simply call this script to start your environment.  For example, if you are located in the folder containing the `envs` folder, simply type:
 ```
-PS C:\Users\morri\source> ./envs/av/Scripts/activate
+PS C:\Users\morri\source> .\envs\av\Scripts\activate.ps1
 (av) PS C:\Users\morri\source>
 ```
 In Linux you would type: `source envs/av/bin/activate`.  Notice that once a virtual environment has been activated, each line with begin with the environment name in parentheses.  This tells you that if you install python packages, they will be installed for that virtual environment, and if you start Python, you'll be starting in that environment.
