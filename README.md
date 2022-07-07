@@ -26,10 +26,12 @@ ___
 * [Chapter 10: Classes](Chapter_10_Classes.md)
 * [Chapter 11: Modules and Packages](Chapter_11_Modules_and_Packages.md)
 * [Chapter 12: Virtual Environments](Chapter_12_Virtual_Environments.md) `*`
-* [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.ipynb) `*`
-* [Chapter 14: Conclusion](Chapter_14_Conclusion.md) `*`
-* [Appendix 1: Solving Linear Equations](Appendix_01_Linear_Equations.md) `*`
-* [Appendix 2: Data Series and Plotting](Appendix_02_Data_and_Plotting.ipynb) `*`
+* [Chapter 13: Numpy](Chapter_13_Numpy.ipynb) `*`
+* [Chapter 14: Scipy](Chapter_14_Scipy.ipynb) `*`
+* [Chapter 15: OpenCV](Chapter_15_OpenCV.ipynb) `*`
+* [Chapter 16: Matplotlib](Chapter_16_Matplotlib.ipynb) `*`
+* [Chapter 17: Linear Equations](Chapter_17_Linear_Equations.ipynb) `*`
+* [Chapter 18: Time Series Data](Chapter_18_Time_Series_Data.ipynb) `*`
 
 `*` These chapter topics differ significantly from those in the book.
 
