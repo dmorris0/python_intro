@@ -69,6 +69,6 @@ If a different environment appears, click on it, and select the virtual environm
 
 
 ___
-### [Outline](README.md), Next: [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.md)
+### [Outline](README.md), Next: [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.ipynb)
 
 

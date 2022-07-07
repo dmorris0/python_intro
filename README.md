@@ -15,7 +15,7 @@ ___
 ## **Outline**
 
 * [Chapter 1: Introduction](Chapter_01_Introduction.md) `*`
-* [Chapter 2: Installation and IDE](Chapter_02_Installation_and_IDE.md) `*`
+* [Chapter 2: Installation and IDE](Chapter_02_Installation_and_IDE.ipynb) `*`
 * [Chapter 3: Python Programs](Chapter_03_Python_Programs.md)
 * [Chapter 4: Strings and Indexing](Chapter_04_Strings_and_Indexing.md)
 * [Chapter 5: Numbers and Math](Chapter_05_Numbers_and_Math.md)
@@ -26,7 +26,7 @@ ___
 * [Chapter 10: Classes](Chapter_10_Classes.md)
 * [Chapter 11: Modules and Packages](Chapter_11_Modules_and_Packages.md)
 * [Chapter 12: Virtual Environments](Chapter_12_Virtual_Environments.md) `*`
-* [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.md) `*`
+* [Chapter 13: Mathematical Tools](Chapter_13_Mathematical_Tools.ipynb) `*`
 * [Chapter 14: Conclusion](Chapter_14_Conclusion.md) `*`
 * [Appendix 1: Solving Linear Equations](Appendix_01_Linear_Equations.md) `*`
 * [Appendix 2: Data Series and Plotting](Appendix_02_Data_and_Plotting.ipynb) `*`
