@@ -31,7 +31,7 @@ ___
 * [Chapter 15: OpenCV](Chapter_15_OpenCV.ipynb) `*`
 * [Chapter 16: Matplotlib](Chapter_16_Matplotlib.ipynb) `*`
 * [Chapter 17: Linear Equations](Chapter_17_Linear_Equations.ipynb) `*`
-* [Chapter 18: Time Series Data](Chapter_18_Time_Series_Data.ipynb) `*`
+* [Chapter 18: Pandas for Time Series Data](Chapter_18_Pandas_for_Time_Series_Data.ipynb) `*`
 
 `*` These chapter topics differ significantly from those in the book.
 
