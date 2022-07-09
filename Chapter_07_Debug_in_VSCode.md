@@ -1,11 +1,9 @@
 # Chapter 7: Debug in VSCode
 
-This chapter differs from Chapter 7 of the book which focuses on the IDLE debugger.  Here the VSCode IDE and debugger are briefly explored.
-
 VSCode provides powerful debugging capabilities for Python and other languages.  This document steps through the process of debugging Python code.  
 
 ## Folders
-In VSCode, rather than opening a single file, it is more usual to open a folder (from the File Menu).  This is typically the source folder for a project.  Make sure you have cloned the repo with these notes called `python_intro`.  Then open this folder using the File Menu.  
+In VSCode, rather than opening a single file, it is more usual to open a folder (from the File Menu).  This is typically the source folder for a project.  Make sure you have cloned the repo with these notes called `python_intro`.  Then open the `python_intro` folder using the File Menu.  
 
 ## File
 Next open a Python file.  For these notes, open the file `arithmetic.py` in the folder `Python`.  You can find this by selecting the `Explorer` in the top left:
@@ -26,11 +24,7 @@ if __name__ == "__main__":
     n = 5
     print(f"Testing sum_to_n({n}) = {sum_to_n(n)}")
 ```
-This if statement is true when the Python file is being executed, as opposed to being imported into another Python file.  For instance, typing the following from the terminal will execute this file:
-```
-$ python arithmetic.py
-```
-The top functions will be defined, and then the lines of indented code following this if statement will be executed.
+When the `arithmetic.py` module is run, the top functions will be defined, and then the lines of indented code following this if statement will be executed.
 
 To run this file in the VSCode Debugger, click in the `arithmetic.py` file.  Then either press `F5` or click on the left-bar Debug icon followed by `Run and Debug` like below:
 

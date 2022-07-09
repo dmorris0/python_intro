@@ -33,8 +33,8 @@ class Car:
 ```
 Notice the 4 components.  
 * The first line or lines after the `class` definition contain the class attributes.  In this case `n_wheels` is a class attribute and will be `4` for all instances of the class.
-* The `__init__(self, make)` is a special function that initializes the class.  `self` is a special parameter that is automatically provided and refers to the instance itself.  The remaining parameters are provided on instantiation.
-* The `__str__(self)` is a special optional function the must return a string.  This is what `print()` receives when it is called on a class instance.
+* The `__init__(self, make)` is a special function that initializes the class.  `self` is a special parameter that is automatically provided and refers to the instance itself.  The remaining parameters are provided on instantiation.  Providing this overrides the default `__init__` that Python assigns each class.
+* The `__str__(self)` is a special optional function the must return a string.  This is what `print()` receives when it is called on a class instance.  Again, providing this overrides the default `__str__` function that Python assigns each class.
 * The `my_needs(self)` function is a method of this class.  
 
 To try out this class, copy and paste the above lines into an interactive terminal.  They try the following:

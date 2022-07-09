@@ -248,7 +248,7 @@ bananas
 oranges
 ```
 ### `enumerate()` Function
-In this loop there is not index, which is often a good thing, but sometimes we need an index.  This can be achieved with the `enumerate()` function which returns a tuple `(index, list_item)` when iterated.  Here is an example:
+In this loop there is no index, which is often a good thing, but sometimes we need an index.  This can be achieved with the `enumerate()` function which returns a tuple `(index, list_item)` when iterated.  Here is an example:
 ```python
 >>> fruit_list = ['apples','bananas','oranges']
 >>> for i,fruit in enumerate(fruit_list):
@@ -259,7 +259,7 @@ In this loop there is not index, which is often a good thing, but sometimes we n
 2. oranges
 ```
 ### `zip()` Function
-If we have two (or more) lists of the same length, we can iterate over them together using the `zip()` function which collates together into a tuple corresponding elements of each list passed into it.  Here is an example:  
+If we have two (or more) lists of the same length, we can iterate over them together using the `zip()` function which collates them together into a tuple corresponding elements of each list passed into it.  Here is an example:  
 ```python
 >>> fruit_list = ['apples','bananas','oranges']
 >>> price_list = [1.5, 0.9, 2.0]
@@ -270,11 +270,11 @@ apples cost $1.5
 bananas cost $0.9
 oranges cost $2.0
 ```
-Note that a better way to represent the above data is with a dictionary linking each fruit to its price, rather than two lists.  Dictionaries are described below.
+Often a better way to represent the above data is with a dictionary linking each fruit to its price, rather than two lists.  Dictionaries are described below.
 
 ### Copying Lists
 
-Assignment is not the same thing as copying.  
+**Important:** Assignment is not the same thing as copying.  
 ```python
 >>> numbers = list(range(5))
 >>> other = numbers             # Assignment of other to numbers
@@ -286,7 +286,7 @@ Assignment is not the same thing as copying.
 ```
 Here `numbers` is a name that points to a block of memory with a list.  With the assignment `other = numbers`, then `other` also points to this same block of memory.  So when we change the list pointed to by `numbers`, this is reflected in `others`.  This assignment has **not** copied the data in numbers.
 
-To copy a list use slicing:
+To copy a list use slicing or `.copy()`, for example:
 ```python
 >>> numbers = list(range(5))
 >>> other = numbers[:]          # Here a copy is made
@@ -418,6 +418,6 @@ London is the capital of United Kingdom
 ```
 
 ___
-### [Outline](README.md), Next: [Chapter 10: Classes](Chapter_11_Classes.md)
+### [Outline](README.md), Next: [Chapter 10: Classes](Chapter_10_Classes.md)
 
 

@@ -161,10 +161,10 @@ Or for versions of Python prior to Python 3.6 which do not have `f-strings`, you
 ## Find and Replace
 The `.find()` method will return the first instance of a string:
 ```python
->>> text = "Hello friend! You my greatest friend."
->>> text.find("friend")             # Find first instance of "friend"
+>>> example_text = "Hello friend! You my greatest friend."
+>>> example_text.find("friend")             # Find first instance of "friend"
 6
->>> text.replace("friend","enemy")  # Replace all instances of "friend" with "enemy"
+>>> example_text.replace("friend","enemy")  # Replace all instances of "friend" with "enemy"
 'Hello enemy! You my greatest enemy.'
 ```
 

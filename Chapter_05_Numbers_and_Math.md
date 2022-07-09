@@ -8,7 +8,7 @@ Numbers without decimals default to integers:
 >>> type(1.0)
 <class 'float'>
 ```
-* Convert strings to integers
+* Convert strings to numbers
 ```python
 >>> int("100")
 100
@@ -24,6 +24,9 @@ Numbers without decimals default to integers:
 ```
 * Infinity:
 ```python
+>>> big = float("inf")
+>>> big
+inf
 >>> n = 2e400
 >>> n
 inf
@@ -115,6 +118,11 @@ If the digit to the left of the `5` is even, then rounds down and if odd then ro
 >>> abs(-5.0)
 5.0
 ```
+* Mondulo: `y % x` divides `y` by `x` and returns the remainder.  Useful for turning a large number `y` into an output from `0` to `x-1`
+```
+>>> 26 % 8
+2
+``` 
 * Power `pow` is the same as `**` and has 2 arguments:
 ```python
 >>> pow(3, 2)

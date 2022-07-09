@@ -49,7 +49,7 @@ False
 ```
 The order of precedence can sometimes be important.  The following is the order of precedence:
 
-|Precendence order, top to bottom |
+|Precedence, top to bottom |
 |--|
 | <,>,<=,>=,==,!= |
 | not |
@@ -69,6 +69,7 @@ This gives an error because the comparator `==` is applied before the `not`, and
 >>> False == (not True)
 True
 ```
+In most cases, to aid clarity and avoid mistakes, it is preferable to avoid relying on precedence and rather use parentheses.
 
 ## Controlling Flow of Code
 An `if` statement will control the flow of execution depending on the output of a condition.  For example:
@@ -80,7 +81,7 @@ An `if` statement will control the flow of execution depending on the output of 
 We are below target
 Got to work harder
 ```
-Notice the colon after the condition.  Also all subsequent statements that are indented will be executed if the condition is `True`.
+Notice the colon after the condition.  Also, all subsequent statements that are indented will be executed if the condition is `True`.
 
 We can add an `else` to provide a sequence of commands when the condition is `False`
 ```python
@@ -91,7 +92,7 @@ We can add an `else` to provide a sequence of commands when the condition is `Fa
 ...
 We are above target
 ```
-In addition any number of `elif` statements, that mean `else if`, can be added:
+In addition any number of `elif` statements, that mean "else if", can be added:
 ```python
 >>> result = 3
 >>> if result >= 4:

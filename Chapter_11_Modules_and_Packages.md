@@ -7,7 +7,7 @@ It is much preferable to organize your code in files or **modules**, as each fil
 ___
 ## Create a Module
 
-Let's dive in by creating a module.  First select `New File` in the `File` menu of VSCode.  Then save it as `simple.py` in a folder called `test_module` which can be located whereever you like on your computer.  
+Let's dive in by creating a module.  First select `New File` in the `File` menu of VSCode.  Then save it as `simple.py` in a folder called `test_module` which can be located wherever you like on your computer.  
 
 Now add some functions to module `simple.py` such as the following:
 ```python
@@ -83,6 +83,8 @@ print(concat('Short','Tall'))
 These examples showed importing functions, and the command is identical to import a class.  
 
 ## Packages
+
+On a first reading of these notes, you may wish to skip the rest of this chapter and move on to [Chapter 12: Virtual Environments](Chapter_12_Virtual_Environments.md).
 
 A package is a folder containing modules and possibly subfolders containing more modules.  Here's an example of a single folder package called `my_package`:
 ```

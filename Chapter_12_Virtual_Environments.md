@@ -4,7 +4,7 @@
 
 Python leaves much of its functionality to libraries.  Python code will import a library, or component of a library, and then can use it within the following lines of code.  Now most of these libraries do not come with the base Python install, but are part of packages that need to be installed before use.  Installing packages is simple, and to it is easy to obtain enormous functionality with just a few commands.
 
-While this availability of a vast number of packages is the power of Python, it also creates compatibility problems.  Packages have many versions, and many versions of many packages are not compatible with each other.  To some extent, version compatibility can be handled by the installer, but package incompatibility means there are certain packages that cannot be installed at the same time.
+However, the vast number of packages in Python creates compatibility problems.  Packages have many versions, and many versions of many packages are not compatible with each other.  To some extent, version compatibility can be handled by the installer, but package incompatibility means there are certain packages that cannot be installed at the same time.
 
 The consequence of this incompatibility dilemma is that it is best that you do **not** install Python packages directly in the base Python environment.  Instead, create multiple separate virtual environments, and install the packages you need within each virtual environment.  It is easy to create virtual environments and to switch between them.  Instructions are given below. 
 
@@ -18,12 +18,12 @@ This command is in Windows PowerShell, but the same command works in other syste
 
 ## Activate a Virtual Environment
 
-To use a Virtual Environment you must activate it.  In Windows the `activate` script is located in the `Scripts` subfolder, and for our case: `envs/av/Scripts/activate`.  Simply call this script to start your environment.  For example, if you are located in the folder containing the `envs` folder, simply type:
+To use a Virtual Environment you must activate it.  In Windows the `activate.ps1` script is located in the `Scripts` subfolder.  Simply call this script to start your environment.  For example, if you are located in the folder containing the `envs` folder, simply type:
 ```
 PS C:\Users\morri\source> .\envs\av\Scripts\activate.ps1
 (av) PS C:\Users\morri\source>
 ```
-In Linux you would type: `source envs/av/bin/activate`.  Notice that once a virtual environment has been activated, each line with begin with the environment name in parentheses.  This tells you that if you install python packages, they will be installed for that virtual environment, and if you start Python, you'll be starting in that environment.
+In Linux you would type: `source envs/av/bin/activate`.  Notice that once a virtual environment has been activated, each line will begin with the environment name in parentheses.  This tells you that if you install python packages, they will be installed for that virtual environment, and if you start Python, you'll be starting in that environment.
 
 Note: PowerShell by default does not permit running scripts, and may give you an error saying scripts are disabled for the system, see https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies.  You can enable scripts as follows:
 1. Run a PowerShell with administrative priviledges
@@ -69,6 +69,6 @@ If a different environment appears, click on it, and select the virtual environm
 
 
 ___
-### [Outline](README.md), Next: [Chapter 13: Mathematical Tools](Chapter_13_Numpy.ipynb)
+### [Outline](README.md), Next: [Chapter 13: Numpy](Chapter_13_Numpy.ipynb)
 
 

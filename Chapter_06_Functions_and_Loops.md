@@ -1,7 +1,7 @@
 # Chapter 6: Functions and Loops
 
 Example of a built-in function: `len()`
-* Functions are values:
+* Functions are values.  
 ```python
 >>> len
 <built-in function len>
@@ -28,7 +28,7 @@ Typing the name of a function **does not** execute it
 >>> len
 <built-in function len>
 ```
-Rather following it with parentheses will execute the function
+**Important:** to run a function you need to follow it with parentheses.  Here we will run the `len` function:
 ```python
 >>> len()
 Traceback (most recent call last):
@@ -78,20 +78,43 @@ Notice the indentation.  The body must be indented identically (except for loops
 
 The function will exit on a `return` statement and return this value.  With no `return` statement, a `None` will be returned.
 
-Notice the documentation in triple quotes.  This starts on the line right after the function definition, and can extend to multiple lines.  This is provided to the help function as follows:
+Notice the documentation in triple quotes.  This starts on the line right after the function definition, and can extend to multiple lines.  The comments here are provided to Python's `help` function, so that when you want to find information on a function you have defined you can type `help(multiply)` like this:
 ```python
 >>> help(multiply)
 Help on function multiply in module arithmetic:
 
 multiply(x, y)
     Returns the product of x and y
-
 ```
-So it is a good idea to document each function you write in this way.  For functions with many or complicated arguments, add explanations for each argument.
+It is a good idea to document each function you write in this way.  For functions with many or complicated arguments, add explanations for each argument.
 
 ## Executing Python Files
 
-Have a look at the provided Python file [Python/arithmetic.py](Python/arithmetic.py), and notice the line below the function definitions:
+Have a look at the provided Python file [Python/arithmetic.py](Python/arithmetic.py) which is shown here:
+```python
+def multiply(x, y):
+    """ Returns the product of x and y """
+    result = x * y
+    return result
+
+def sum_to_n(n):
+    """ Finds sum of integers from 0 to n inclusive """
+    i = 0
+    sum_val = i
+    while i <= n:
+        sum_val += i
+        i += 1
+    return sum_val
+
+if __name__ == "__main__":
+    
+    a, b = 3, 4
+    print(f"Testing multiply({a},{b}) = {multiply(a,b)}")
+
+    n = 5
+    print(f"Testing sum_to_n({n}) = {sum_to_n(n)}")
+```
+Notice the line below the function definitions:
 ```python
 if __name__=="__main__":
 ```
@@ -99,11 +122,11 @@ This enables the file to do double duty as a package and as an executable.  When
 ```python
 from arithmetic import multiply
 ```
-In this case `__name__` is not `"__main__"` and the condition is false.  Alternatively, you can run this file in a debugger or execute it from the command line like this:
+In this case the special variable `__name__` is not equal to `"__main__"` and the condition is false.  Alternatively, you can run this file in a debugger or execute it from the command line like this:
 ```bash
 python arithmetic.py
 ```
-In this case `__name__` is set to `"__main__"`, and so the functions will be defined **and** everything below this condition line will also execute.  For packages I find this quite useful as a way to include debugging tests of the functions defined earlier in the file.  For example, try executing `arithmetic.py` with the above command.
+In this case the variable `__name__` will automatically be given the value `"__main__"`, and so when run the functions will be defined **and** everything below this condition line will also execute.  This is a way to both define functions and execute code within a single module.  In the example above, the code following this condition runs some tests on the functions defined in the module. Try it out.
 
 ## Typing
 
@@ -114,7 +137,7 @@ def multiply(x: float, y: float) -> float:
     result = x * y
     return result
 ```
-Note that Python does not impose type constraints during runtime and will not raise a `TypeError` if you input the wrong type and nor will it force the output to be of the specified type.  Those are the programmer's responsibilities.  But they do make it easier to decipher what the code is expecting, which you'll find is often a big help in using functions.  
+Note that Python does **not** impose type constraints during runtime and will not raise a `TypeError` if you input the wrong type and nor will it force the output to be of the specified type.  Those are the programmer's responsibilities.  But they do make it easier to decipher what the code is expecting, which you'll find is often a big help in using functions.  
 
 There are many more details to specifying types such as multiple types, lists, callable functions etc., which you can find here: [https://docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html).
 
@@ -153,7 +176,7 @@ def sum_to_n(n):
         i += 1
     return sum_val
 ```
-Then from the python interpreter:
+Notice the condition after the `while` command and the new indentation following it.  The indented code after this is repeatedly looped over until the condition is no longer satisfied.  Try this from the python interpreter:
 ```python
 >>> from arithmetic import sum_to_n
 >>> sum_to_n(10)
@@ -162,7 +185,7 @@ Then from the python interpreter:
 
 ## For Loops
 
-For loops are a preferable way to iterate over a list or more generally a membership expression. A string is an example expression containing a sequence of letters.
+For loops are a preferable way to iterate over a list or more generally a membership expression. A string is an example expression containing a sequence of letters.  You can try out a `for` loop straight from the interactive terminal as follows.  Just make sure to indent code following the `for` line:
 ```python
 >>> for letter in "Hello":
 ...     print(letter)
@@ -188,6 +211,8 @@ l
 o
 ```
 We get the same result, but less succinct, and has greater opportunities for bugs.  For example, if you omitted the line `i += 1`, the loop would iterate forever -- try it.  Pressing `Ctrl-C` will exit from such an infinite loop.   
+
+This way of steping through an object with a for loop works for other objects too (such as lists) as long as they are *iterable* objects.
 
 ### The `range()` function
 

@@ -15,7 +15,7 @@ ___
 ## **Outline**
 
 * [Chapter 1: Introduction](Chapter_01_Introduction.md) `*`
-* [Chapter 2: Installation and IDE](Chapter_02_Installation_and_IDE.ipynb) `*`
+* [Chapter 2: Install Python and an IDE](Chapter_02_Installation_and_IDE.ipynb) `*`
 * [Chapter 3: Python Programs](Chapter_03_Python_Programs.md)
 * [Chapter 4: Strings and Indexing](Chapter_04_Strings_and_Indexing.md)
 * [Chapter 5: Numbers and Math](Chapter_05_Numbers_and_Math.md)
