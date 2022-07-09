@@ -118,7 +118,7 @@ If the digit to the left of the `5` is even, then rounds down and if odd then ro
 >>> abs(-5.0)
 5.0
 ```
-* Mondulo: `y % x` divides `y` by `x` and returns the remainder.  Useful for turning a large number `y` into an output from `0` to `x-1`
+* The modulo operator: `%`.  In the expression `y % x`, `y` is divided by `x` the remainder is returned.  This is useful for turning a large number `y` into an output from `0` to `x-1`
 ```
 >>> 26 % 8
 2
@@ -142,6 +142,10 @@ With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`, where `%` is 
 'n is approximately 1.25
 ```
 Here `.2f` indicates a **fixed-point floating** number with 2 digits after the decimal place.  Notice that is is rounded as with `round()`
+
+## Exercise: Indexing an Image
+
+Consider an image with width `W` and height `H`.  Now index the pixels linearly row first.  The pixel index, `p`, will be a value in `range(H*W)`, namely from `0` to `H*W-1` inclusive.  Now write an expression that returns a tuple `(r,c)` where `r` is the row index and `c` the column index.  Hint: the only operators you need are `%` and `//`.  When you have it, try it out on a `4x5` image and confirm that it works.
 
 ___
 ### [Outline](../README.md), Next: [Chapter 6: Functions and Loops](Chapter_06_Functions_and_Loops.md)
