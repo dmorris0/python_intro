@@ -147,7 +147,8 @@ Here `.2f` indicates a **fixed-point floating** number with 2 digits after the d
 
 Consider an image with height `H` and width `W`.  Now index all the pixels linearly, starting with the first row, then the second row and on.  The pixel index, `p`, will have `W*H` values in the range `0` to `H*W-1` inclusive.  Now write an expression that transforms the index `p` into a tuple `(r,c)` where `r` is the row index and `c` the column index.  Hint: the only operators you need are `%` and `//`.  When you have it, try it out on pixel indices from a `6x8` image and confirm that it works.  Here are the pixel indices as well as row and column indices so you can check your code:
 ```
-r  c: 0   1   2   3   4   5   6   7
+   c: 0   1   2   3   4   5   6   7
+r    ------------------------------ 
 0  [[ 0,  1,  2,  3,  4,  5,  6,  7],
 1   [ 8,  9, 10, 11, 12, 13, 14, 15],
 2   [16, 17, 18, 19, 20, 21, 22, 23],
