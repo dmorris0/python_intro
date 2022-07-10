@@ -8,7 +8,7 @@ The notes only attempt a basic introduction to Python and are not comprehensive.
 If, on the other hand, you are new to programming, then these notes may be too terse, and it would be preferable to follow the book.    
 
 ## Learning Python
-This Python introduction teaches by example.  To learn Python with these notes, it is best try all the examples yourself.  Don't cut and paste the commands -- there is very little benefit to that.  Instead, type them in to the Python command line *yourself*.  This act of typing is integral to learning how to program, as the best way to learn programming concepts is to **use them** after you see them. 
+This Python introduction teaches by example.  To learn Python with these notes, it is best try all the examples yourself.  Don't cut and paste the commands -- there is very little benefit to that.  Instead, type them in to the Python command line *yourself*.  This act of typing is integral to learning how to program, as the best way to learn programming concepts is to **use them** after you see them. Also, a number of the chapters have **exercises** at the end of the chapter.  Do these in an interative Python terminal or using a debugger to practice the concepts from the chapter and to learn some new tricks. 
 
 ## Operating System
 

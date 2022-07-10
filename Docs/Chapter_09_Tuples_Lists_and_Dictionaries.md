@@ -416,6 +416,27 @@ Washington DC is the capital of United States
 Mexico City is the capital of Mexico
 London is the capital of United Kingdom
 ```
+___
+## Exercises
+
+These exercises use the following list:
+```python
+cutlery = ["Big fork","Little fork","Big spoon","Little spoon","Steak knife","Butter knife"]
+```
+1. Use list comprehension to make a new identical list but with all letters in lower case
+2. Use list comprehension to create a new list called `modifiers` equal to the first word of each list element.  You should get a result like this:
+```python
+>>> modifiers
+['Big', 'Little', 'Big', 'Little', 'Steak', 'Butter']
+```
+3. Create a new list with all duplicates of the `modifiers` list removed.  One way to do this is to convert the list into a set, which has the propery of not having any duplicate elements, and then to convert back to a list.  You can use the `set()` and `list()` commands to do this.
+4. We have a list called `weights` with the weights of each cutlery item in grams, see below.  Use a for loop along with `zip` to add each item and its weight to a dictionary containing the cutlery items with their weights.  You should not be doing any indexing.
+```
+weights = [14,10,18,12,25,20]
+```
+
+5. While the method in (4) for creating a dictionary from two lists works, there is a simpler way.  Try the following command: `dict(zip(cutlery,weights))` and compare this with what you got from (4).
+6. Write a loop to print out each item of cutlery and its weight using the dictionary.
 
 ___
 ### [Outline](../README.md), Next: [Chapter 10: Classes](Chapter_10_Classes.md)

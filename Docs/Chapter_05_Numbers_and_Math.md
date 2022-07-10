@@ -143,19 +143,25 @@ With three arguments `pow(x, y, z)` is the same as `(x ** y) % z`, where `%` is 
 ```
 Here `.2f` indicates a **fixed-point floating** number with 2 digits after the decimal place.  Notice that is is rounded as with `round()`
 
-## Exercise: Row and Column Indexing an Image
+___
+## Exercises
 
-Consider an image with height `H` and width `W`.  Now index all the pixels linearly, starting with the first row, then the second row and on.  The pixel index, `p`, will have `W*H` values in the range `0` to `H*W-1` inclusive.  Now write an expression that transforms the index `p` into a tuple `(r,c)` where `r` is the row index and `c` the column index.  Hint: the only operators you need are `%` and `//`.  When you have it, try it out on pixel indices from a `6x8` image and confirm that it works.  Here are the pixel indices as well as row and column indices so you can check your code:
+*Image Indexing*: Consider an image with height `height` and width `width`.  Now index all the pixels linearly, starting with the first row, then the second row and on.  The pixel index, `ind`, will have `width*height` values in the range `0` to `width*height-1` inclusive.  Here is an example `6x8` image showing the pixel indices as well as row and column indices:
 ```
-   c: 0   1   2   3   4   5   6   7
-r    ------------------------------ 
-0  [[ 0,  1,  2,  3,  4,  5,  6,  7],
-1   [ 8,  9, 10, 11, 12, 13, 14, 15],
-2   [16, 17, 18, 19, 20, 21, 22, 23],
-3   [24, 25, 26, 27, 28, 29, 30, 31],
-4   [32, 33, 34, 35, 36, 37, 38, 39],
-5   [40, 41, 42, 43, 44, 45, 46, 47]]
+  col: 0   1   2   3   4   5   6   7
+row   ------------------------------ 
+0   [[ 0,  1,  2,  3,  4,  5,  6,  7],
+1    [ 8,  9, 10, 11, 12, 13, 14, 15],
+2    [16, 17, 18, 19, 20, 21, 22, 23],
+3    [24, 25, 26, 27, 28, 29, 30, 31],
+4    [32, 33, 34, 35, 36, 37, 38, 39],
+5    [40, 41, 42, 43, 44, 45, 46, 47]]
 ```
+1. Write an expression that calculates `ind` given `row`, `col`, and `width`.
+2. Write a single operation that calculates `col` given `ind` and `width`
+3. Write a single operation that calculates `row` given `ind` and `width`
+
+Hint: for (2) and (3) the only operators you need are `%` and `//`.  Test your expressions using Python.
 
 ___
 ### [Outline](../README.md), Next: [Chapter 6: Functions and Loops](Chapter_06_Functions_and_Loops.md)

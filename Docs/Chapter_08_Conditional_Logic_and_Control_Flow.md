@@ -242,4 +242,19 @@ Here each `except` handles a separate error type.  The final bare `except` handl
 Here `sys.argv` is a list of arguments passed to a Python file, and so is only useful as part of a Python program (and not in the interactive terminal).  This attempts to open each input argument as a file.  If it cannot open it, the `except OSError:` command causes it to display a message and go on to the next.  The `else:` block that reads the file will be executed only if the `try:` block is successful.  It is better to keep this code in its own block, rather than as part of the try block as otherwise it would be protected by the `try`-`except` pair and we may wish other exceptions to be raised if its contents are not what we expect.
 
 ___
+## Exercise
+
+This exercise builds on the exercises in [Chapter 6](Chapter_06_Functions_and_Loops.md).
+
+1. Use a `for` loop to iterate over all pixel indices in an image.  Within this loop print the following single characters with no end-of-line: (a) a `0` if the row is the same the column, (b) a `c` if the column is greater than the row, (c) a `r` if the row is greater than the column.  Also print an end-of-line for the last column of each row.  Your output should look like this:
+```
+0ccccccc
+r0cccccc
+rr0ccccc
+rrr0cccc
+rrrr0ccc
+rrrrr0cc
+```
+
+___
 ### [Outline](../README.md), Next: [Chapter 9: Tuples, Lists and Dictionaries](Chapter_09_Tuples_Lists_and_Dictionaries.md)

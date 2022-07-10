@@ -257,4 +257,29 @@ Functions inside functions behave similarly; they inherit the scope of their par
 It is possible to define a variable as `global` from inside a function, but usually it is better practice to avoid using global variables inside a function.  
 
 ___
+## Exercises
+
+Review the image indexing exercises in [Chapter 5](Chapter_05_Numbers_and_Math.md).  
+
+1. Write a function that calculates the image index like this: `ind = im_index(row, col, width)`
+2. Write a function that calculates the image column like this: `col = im_col(ind, width)`
+3. Write a function that calculates the image row like this: `row = im_row(ind, width)`
+4. Write a for loop using the `range()` function that iterates over image indices.  During each iteration it should call the `im_col()` and `im_row()` functions you just defined and print out the index, row and column like this:
+```
+Index: 0 row: 0 col: 0
+Index: 1 row: 0 col: 1
+Index: 2 row: 0 col: 2
+Index: 3 row: 0 col: 3
+Index: 4 row: 0 col: 4
+Index: 5 row: 0 col: 5
+Index: 6 row: 0 col: 6
+Index: 7 row: 0 col: 7
+Index: 8 row: 1 col: 0
+Index: 9 row: 1 col: 1
+Index: 10 row: 1 col: 2
+Index: 11 row: 1 col: 3
+...
+```
+
+___
 ### [Outline](../README.md), Next: [Chapter 7: Debug in VSCode](Chapter_07_Debug_in_VSCode.md)

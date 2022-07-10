@@ -81,6 +81,14 @@ IndexError: string index out of range
 >>> b[::2]        # Every second element
 'Gobe'
 ```
+* Negative steps work for reversing the order
+```python
+>>> b[::-1]       # Reverse order of b
+'eybdooG'
+>>> b[3::-1]      # Reverse first 4 elements of b
+'dooG'
+``` 
+
 ## Immutability and Methods
 * Strings are **immutable**. That is, they cannot be changed:
 ```python
@@ -167,6 +175,24 @@ The `.find()` method will return the first instance of a string:
 >>> example_text.replace("friend","enemy")  # Replace all instances of "friend" with "enemy"
 'Hello enemy! You my greatest enemy.'
 ```
+## End-of-line
+Within code you will typically use the `print()` function to output to the terminal, and combining this with `f-strings` gives a lot of flexibility.  By default `print()` will append an end-of-line character to the output so that the next print will be on the next line.  Sometimes in loops you may want to print multiple statements to the same line, and can do this with the `end=""` option like this:
+```
+>>> print("Hello",end="")
+Hello>>> 
+```
+___
+## Exercises
+
+The following exercises use this string
+```python
+>>> alphabet = "abcdefghijklmnopqrstuvwxyz"
+```
+1. Write an expression that returns every third element of the alphabet starting with the letter `c`
+2. Write an expression that reverses the alphabet and returns every other letter starting with `z`
+3. Write an expression that returns the last 10 letters in upper case
+4. Write an expression that finds the index of the letter `z`
+5. Using `f-strings` and the `alphabet` string above, write an expression outputs the following text: `"The capitalized even letters are BDFHJLNPRTVXZ"`
 
 ___
 ### [Outline](../README.md), Next: [Chapter 5: Numbers and Math](Chapter_05_Numbers_and_Math.md)
