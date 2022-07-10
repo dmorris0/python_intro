@@ -145,7 +145,7 @@ Here `.2f` indicates a **fixed-point floating** number with 2 digits after the d
 
 ## Exercise: Indexing an Image
 
-Consider an image with width `W` and height `H`.  Now index the pixels linearly row first.  The pixel index, `p`, will be a value in `range(H*W)`, namely from `0` to `H*W-1` inclusive.  Now write an expression that returns a tuple `(r,c)` where `r` is the row index and `c` the column index.  Hint: the only operators you need are `%` and `//`.  When you have it, try it out on pixel indices from a `4x10` image and confirm that it works.
+Consider an image with height `H` and width `W`.  Now index all the pixels linearly, starting with the first row, then the second row and on.  The pixel index, `p`, will have `W*H` values in the range `0` to `H*W-1` inclusive.  Now write an expression that transforms the index `p` into a tuple `(r,c)` where `r` is the row index and `c` the column index.  Hint: the only operators you need are `%` and `//`.  When you have it, try it out on pixel indices from a `4x10` image and confirm that it works.
 
 ___
 ### [Outline](../README.md), Next: [Chapter 6: Functions and Loops](Chapter_06_Functions_and_Loops.md)
