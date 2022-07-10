@@ -1,5 +1,4 @@
 # Chapter 1: Introduction
-
 ## Who Are These Notes For?
 
 The notes are self-contained but fairly terse, and are intended for someone versed in other programming languages to quickly learn the syntax, style and peculiarities of Python.  Hence, given some programming background, they can be followed without using the book.  

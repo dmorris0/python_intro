@@ -1,6 +1,6 @@
 # A Python Introduction
 
-## Daniel Morris, PhD
+## Daniel Morris, Ph.D., Copyright 2021, 2022
 ___
 
 <table>
