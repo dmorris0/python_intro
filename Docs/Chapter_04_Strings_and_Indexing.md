@@ -161,15 +161,15 @@ Using `f-strings` is often simpler and preferable for converting numbers to stri
 >>> f"I ate {n1} apples and {n2} oranges"
 'I ate 10 apples and 5 oranges'
 ```
-You can set the number of decimal points and format using C-language formatting by following the number with a colon and the format like this:
-```
->>> print(f"The fraction being apples is: {n2/(n1+n2):.3}")
+In code you would typically include this in a `print()` function.  Also, you can set the number of decimal points and format using C-language formatting by following the number with a colon and the format like this:
+```python
+>>> print( f"The fraction being apples is: {n2/(n1+n2):.3}" )
 The fraction being apples is: 0.333
 ```
-Or for versions of Python prior to Python 3.6 which do not have `f-strings`, you can use the `.format()` function:
+For versions of Python prior to Python 3.6 which do not have `f-strings`, you can use the `.format()` function:
 ```python
->>> "I ate {} apples and {} oranges".format(n1,n2)
-'I ate 10 apples and 5 oranges'
+>>> print( "I ate {} apples and {} oranges".format(n1,n2) )
+I ate 10 apples and 5 oranges
 ```
 ## Find and Replace
 The `.find()` method will return the first instance of a string:
