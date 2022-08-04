@@ -27,7 +27,7 @@ Melinda said "Hello!"
 7
 ```
 ## Indexing and Slicing
-Indexing is a key concept and is used extensively not just for strings, but lists and arrays.  It is worth spending some time to get familiary with how Python indexing works.  String indices start at `0` and proceed to the `length-1`. They can also be indexed from `-length` to `-1`.  Here is one way to picture indexing on the string `b = 'Goodbye'` whose length is 7 characters:
+Indexing is a key concept and is used extensively not just for strings, but lists and arrays.  It is worth spending some time to get familiary with how Python indexing works.  String indices start at `0` and proceed to `length-1`. They can also be indexed from `-length` to `-1`.  Here is one way to picture indexing on the string `b = 'Goodbye'` whose length is 7 characters:
 ```
 String:  |  G  o  o  d  b  y  e  |  G  o  o  d  b  y  e |
 Indices: | -7 -6 -5 -4 -3 -2 -1  |  0  1  2  3  4  5  6 |
@@ -156,12 +156,17 @@ Or convert the number to a string:
 >>> "I ate " + str(n1) + " apples and " + str(n2) + " oranges" 
 'I ate 10 apples and 5 oranges'
 ```
-Using `f-strings` is often simpler and preferable for converting numbers to strings, such as when you want to display them:
+Using `f-strings` is often simpler and preferable for converting numbers to strings, such as when you want to display them.  Insert an 'f' infront of the first quote, and then use curly braces within the string to insert the number into the string.  
 ```python
 >>> f"I ate {n1} apples and {n2} oranges"
 'I ate 10 apples and 5 oranges'
 ```
-Or for versions of Python prior to Python 3.6 which do not have `f-strings`, you can use:
+You can set the number of decimal points and format using C-language formatting by following the number with a colon and the format like this:
+```
+>>> print(f"The fraction being apples is: {n2/(n1+n2):.3}")
+The fraction being apples is: 0.333
+```
+Or for versions of Python prior to Python 3.6 which do not have `f-strings`, you can use the `.format()` function:
 ```python
 >>> "I ate {} apples and {} oranges".format(n1,n2)
 'I ate 10 apples and 5 oranges'

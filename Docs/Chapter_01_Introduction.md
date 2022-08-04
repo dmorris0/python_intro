@@ -12,7 +12,7 @@ This Python introduction teaches by example.  To learn Python with these notes, 
 
 ## Operating System
 
-Python is available on many operating systems (OSes), although here the how-to-install descriptions will assume you are working in Windows.  However, it should be straightforward to perform the same tasks on Linux, MaxOS and other OSes.
+Python is available on many operating systems (OSes), although here the how-to-install descriptions will assume you are working in Windows.  However, it should be straightforward to perform the same tasks on Linux, MacOS and other OSes.
 
 ## Integrated Developer Environment (IDE)
 The book that inspired these notes "Python Basics: A Practical Introduction to Python 3" by David Atmos et al., uses the Integrated Developer Environment (IDE) that comes with Python called IDLE. These notes, on the other hand, use Visual Studio Code (VSCode).  VSCode is free, open-source, cross-platform, light-weight while at the same time being extremely powerful, and surprisingly easy to use.  It provides powerful editing and debugging functions for Python. It also has extensions for many other applications.  For instance, I am writing these notes in VSCode using Markdown and Jupyter Notebooks.  If you wish, you can read these notes and run code samples all within VSCode.
