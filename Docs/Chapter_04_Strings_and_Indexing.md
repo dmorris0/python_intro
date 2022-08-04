@@ -189,10 +189,12 @@ Hello>>>
 ___
 ## Exercises
 
-The following exercises use this string
+The following exercises use the string variable:
 ```python
 >>> alphabet = "abcdefghijklmnopqrstuvwxyz"
 ```
+Copy and paste this into your Python environment.  Then do the following using the `alphabet` variable:
+
 1. Write an expression that returns every third element of the alphabet starting with the letter `c`
 2. Write an expression that reverses the alphabet and returns every other letter starting with `z`
 3. Write an expression that returns the last 10 letters in upper case
