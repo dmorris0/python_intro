@@ -161,10 +161,16 @@ Using `f-strings` is often simpler and preferable for converting numbers to stri
 >>> f"I ate {n1} apples and {n2} oranges"
 'I ate 10 apples and 5 oranges'
 ```
-In code you would typically include this in a `print()` function.  Also, you can set the number of decimal points and format using C-language formatting by following the number with a colon and the format like this:
+In code you would typically include this in a `print()` function.  Also, you can set the number format such as leading zeros and number of decimal points using C-language formatting.  Simply follow the number with a colon and the format specifier like this:
 ```python
->>> print( f"The fraction being apples is: {n2/(n1+n2):.3}" )
-The fraction being apples is: 0.333
+>>> print( f"I ate {n1:03d} apples and {n2:03d} oranges" )    # Leading zeros and 3 characters
+I ate 010 apples and 005 oranges
+>>> print( f"Percent apples: {n2/(n1+n2)*100}" )              # Full float
+Percent apples: 33.33333333333333
+>>> print( f"Percent apples: {n2/(n1+n2)*100:.2f}" )          # 2 decimal points
+Percent apples: 33.33
+>>> print( f"Percent apples: {n2/(n1+n2)*100:10.2f}" )        # 10 characters and 2 decimal places
+Percent apples:      33.33
 ```
 For versions of Python prior to Python 3.6 which do not have `f-strings`, you can use the `.format()` function:
 ```python
