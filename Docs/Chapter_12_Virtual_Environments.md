@@ -85,7 +85,18 @@ If you create new virtual environments in this same `venvs` folder, you'll be ab
 
 ## Installing Packages
 
-As mentioned above, it is best not to install packages in your base Python environment, but rather to install them in a virtual environment.  Start by activating an environment as above.  Then to install `numpy`, a package we will use in the next chapter, use the following command:
+As mentioned above, it is best not to install packages in your base Python environment, but rather to install them in a virtual environment.  Start by activating your environment as explained above, and you'll see `(av)` at the start of each line.  Then make sure you have a recent version of `pip` by upgrading `pip` with this command:
+```bash
+(av) PS C:\Users\morri\source> python -m pip install --upgrade pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/09/bd/2410905c76ee14c62baf69e3f4aa780226c1bbfc9485731ad018e35b0cb5/pip-22.3.1-py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 19.2.3
+    Uninstalling pip-19.2.3:
+      Successfully uninstalled pip-19.2.3
+Successfully installed pip-22.3.1
+```
+Now you are ready to install `numpy`, a package we will use in the next chapter.  Use the following command:
 ```bash
 (av) PS C:\Users\morri\source> python -m pip install numpy
 Collecting numpy
@@ -93,10 +104,8 @@ Collecting numpy
      |████████████████████████████████| 14.0 MB 6.4 MB/s
 Installing collected packages: numpy
 Successfully installed numpy-1.21.2
-WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
-You should consider upgrading via the 'C:\Users\morri\source\venvs\av\Scripts\python.exe -m pip install --upgrade pip' command.
 ```
-Here the `numpy` package was successfully installed in the `av` environment.  You may be prompted to upgrade pip, which you can do with the suggested command.  
+Here the `numpy` package was successfully installed in the `av` environment.  
 
 ## Run Python
 
