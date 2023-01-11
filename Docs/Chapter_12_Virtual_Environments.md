@@ -18,7 +18,7 @@ or with:
 ```
 PS C:\Users\morri\source\venvs> python -m venv --system-site-packages av
 ```
-(In Linux you may need to call `python3` rather than `python`).  This will create a virtual environment called `av`.  If you look in your `venvs` folder you will see an `av` folder that contains details of the `av` virtual environment, as well as any packages you install within it.  
+(In Linux you may need to call `python3` rather than `python`).  This will create a virtual environment called `av`, but you can choose whatever name you like, and you can make as many virtual environments as you like each with their own name.  If you look in your `venvs` folder you will see an `av` folder that contains details of the `av` virtual environment, as well as any packages you install within it.  
 
 The difference between the above two commands is the optional argument: `--system-site-packages`.  With this argument included, the virtual environment will inherit packages that are installed in the your base Python.  If you want your virtual environment to have all it's own packages, then don't include this.  But if the base Python already has packages you need and would rather not duplicate them in your virtual environment, then include this option.   
 
@@ -51,7 +51,7 @@ It can be tedious to type out the full path name in order to activate your virtu
 ```
 echo $profile
 ```
-This should return the full path and name of a script with a name like: `Microsoft.PowerShell_profile.ps1`.  Then open this file with Visual Studio, or create it if it doesn't exist, and add the following lines to it:
+This should return the full path and name of a script with a name like: `Microsoft.PowerShell_profile.ps1`.  Then open this file with Visual Studio Code, or create it if it doesn't exist, and add the following lines to it:
 ```
 # Virtual environment folder: adjust the following path for your system:
 $venvfolder = 'C:\Users\morri\source\venvs'
