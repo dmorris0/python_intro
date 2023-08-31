@@ -85,13 +85,13 @@ If you create new virtual environments in this same `venvs` folder, you'll be ab
 
 ## Virtual Environments in Linux
 
-We can set up a similar command in linux that will activate your virtual environment.  Let's assume you create a folder `venvs` in your home folder to put your virtual environments, and then in this folder you created your `av` virtual environment.  For this you would use:
+We can set up a similar command in linux that will activate your virtual environment.  Let's create a folder `venvs` in your home folder to hold all your virtual environments, and in this create your `av` virtual environment as follows:
 ```
 ~$ mkdir venvs
 ~$ cd venvs
 ~/venvs$ python3 -m venv av
 ```
-Note that in linux you'll need to use `python3` to create the virtual environment.  Now let's create a `act` command for activating it.  Add the following text to your `.bashrc` file:
+Note that in linux you'll need to use `python3` to create the virtual environment.  Now let's create the `act` command for activating it.  Add the following text to your `.bashrc` file:
 ```
 # Command to activate selected virtual environment:
 VENV_FOLDER=$HOME/venvs                   # Change this as appropriate
@@ -110,7 +110,7 @@ Then execute your `.bashrc` file with:
 ```
 ~$ source ~/.bashrc
 ```
-After this you can type `act` to list your virtual environments, or else you can activate your an environment with:
+After this you can type `act` to list your virtual environments, or else you can activate your environment with:
 ```
 ~$ act av
 source /home/dmorris/venvs/av/bin/activate
