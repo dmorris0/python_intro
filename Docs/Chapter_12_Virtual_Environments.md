@@ -83,6 +83,41 @@ act av
 ```
 If you create new virtual environments in this same `venvs` folder, you'll be able to activate any of them with: `act <environment_name>`
 
+## Virtual Environments in Linux
+
+We can set up a similar command in linux that will activate your virtual environment.  Let's assume you create a folder `venvs` in your home folder to put your virtual environments, and then in this folder you created your `av` virtual environment.  For this you would use:
+```
+~$ mkdir venvs
+~$ cd venvs
+~/venvs$ python3 -m venv av
+```
+Note that in linux you'll need to use `python3` to create the virtual environment.  Now let's create a `act` command for activating it.  Add the following text to your `.bashrc` file:
+```
+# Command to activate selected virtual environment:
+VENV_FOLDER=$HOME/venvs                   # Change this as appropriate
+act() {
+  if [ $# -eq 0 ]
+  then
+    ls $VENV_FOLDER                       # If no arguments, display all virtual environments
+  else
+    cmd="source $VENV_FOLDER/${1}/bin/activate"   # Activate selected virtual environment
+    echo $cmd
+    eval $cmd
+  fi
+}
+```
+Then execute your `.bashrc` file with:
+```
+~$ source ~/.bashrc
+```
+After this you can type `act` to list your virtual environments, or else you can activate your an environment with:
+```
+~$ act av
+source /home/dmorris/venvs/av/bin/activate
+(av) ~$
+```
+Now when you type `python` (not `python3`), it will use your virtual environment.  As usual, use `deactivate` when you no longer want to use it.
+
 ## Installing Packages
 
 As mentioned above, it is best not to install packages in your base Python environment, but rather to install them in a virtual environment.  Start by activating your environment as explained above, and you'll see `(av)` at the start of each line.  Then make sure you have a recent version of `pip` by upgrading `pip` with this command:
