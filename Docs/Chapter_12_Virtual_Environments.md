@@ -45,7 +45,7 @@ PS C:\Users\morri\source>
 
 ## An Easier Way to Activate your Virtual Environment
 
-This section is purely optional and you can skip it if you prefer and move on to the next section: [Installing Packages](#installing-packages).
+This section is purely optional and you can skip it if you prefer and move on to the next section: [Installing Packages](#installing-packages).  Or if you are working in linux, you can jump to [Virtual Environments in Linux](#virtual-environments-in-linux).
 
 It can be tedious to type out the full path name in order to activate your virtual environment.  And you may have multiple virtual environments, making it not feasible to create an alias to activate each environment.  A solution to this is to create a PowerShell function for initializing your virtual environments.  To do this, first find your PowerShell `$profile` by typing:
 ```
@@ -110,7 +110,12 @@ Then execute your `.bashrc` file with:
 ```
 ~$ source ~/.bashrc
 ```
-After this you can type `act` to list your virtual environments, or else you can activate your environment with:
+After this you can list your virtual environments with:
+```
+~$ act
+av
+```
+Or you can activate your environment with:
 ```
 ~$ act av
 source /home/dmorris/venvs/av/bin/activate
