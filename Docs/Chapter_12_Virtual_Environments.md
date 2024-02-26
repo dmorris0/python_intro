@@ -51,7 +51,11 @@ It can be tedious to type out the full path name in order to activate your virtu
 ```
 echo $profile
 ```
-This should return the full path and name of a script with a name like: `Microsoft.PowerShell_profile.ps1`.  Then open this file with Visual Studio Code, or create it if it doesn't exist, and add the following lines to it:
+This should return the full path and name of a script with a name like: `Microsoft.PowerShell_profile.ps1`.  Then open this file with Visual Studio Code, or create it if it doesn't exist, by typing:
+```
+code $profile
+```
+Then add the following lines to it:
 ```
 # Virtual environment folder: adjust the following path for your system:
 $venvfolder = 'C:\Users\morri\source\venvs'
