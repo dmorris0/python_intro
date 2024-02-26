@@ -14,6 +14,8 @@ When you open a Python file for the first time, a window may open prompting you 
 
 ![Interpreter](.Images/vs_interpreter.png)
 
+If you are using a virtual environment, see Chapter 12, you may need to navigate to the `Scripts` folder in your virtual environment and select `python.exe` in order to use the virtual environment interpreter.
+
 You should now have `arithmetic.py` open in a window in VSCode.  The top portion of it contains a number of function definitions.  Near the bottom you will see the lines:
 ```python
 if __name__ == "__main__":
